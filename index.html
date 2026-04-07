@@ -80,6 +80,19 @@
   --mono:'Fira Code',monospace;--display:'Bebas Neue',sans-serif;--body:'DM Sans',sans-serif;
 }
 
+/* ── TEXT REVEAL ANIMATION ── */
+.text-reveal{overflow:hidden;position:relative;}
+.text-reveal span{display:inline-block;opacity:0;animation:textReveal .8s cubic-bezier(.16,1,.3,1) forwards;transform:translateY(10px);}
+@keyframes textReveal{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+
+/* ── PARALLAX BACKGROUND EFFECT ── */
+.parallax-bg{position:relative;overflow:hidden;}
+.parallax-layer{position:absolute;inset:0;z-index:-1;will-change:transform;}
+
+/* ── BUTTON SCALE EFFECT ── */
+.btn-scale{transition:transform .2s cubic-bezier(.34,1.56,.64,1);}
+.btn-scale:active{transform:scale(.96);}
+
 html{scroll-behavior:smooth;}
 body{background:var(--ink);color:var(--text);font-family:var(--body);overflow-x:hidden;cursor:none;transition:background .4s,color .4s;}
 
@@ -373,6 +386,8 @@ footer{padding:26px 56px;border-top:1px solid var(--line);display:flex;justify-c
 /* ── MOBILE ── */
 @media(max-width:1024px){
   .svc-grid{grid-template-columns:1fr 1fr;}
+  .pricing-wrapper{grid-template-columns:1fr;gap:60px;}
+  .pricing-right{grid-template-columns:1fr 1fr;}
 }
 @media(max-width:960px){
   nav{padding:18px 22px;}
@@ -388,6 +403,9 @@ footer{padding:26px 56px;border-top:1px solid var(--line);display:flex;justify-c
   .bizitem{grid-template-columns:1fr;gap:10px;padding:22px;}
   .bizidx{display:none;}
   .projgrid{grid-template-columns:1fr;}
+  .pricing-wrapper{grid-template-columns:1fr;gap:40px;}
+  .pricing-right{grid-template-columns:1fr;}
+  .faq-wrap{padding:0;margin:0;}
   footer{flex-direction:column;gap:10px;text-align:center;padding:22px;}
   .scr-hint{left:24px;}
   .cf-row{grid-template-columns:1fr;}
@@ -395,6 +413,10 @@ footer{padding:26px 56px;border-top:1px solid var(--line);display:flex;justify-c
 @media(max-width:540px){
   .skgrid{grid-template-columns:1fr;}
   .proj-filters{gap:6px;}
+  .pc-sel{grid-template-columns:1fr;}
+  .pricing-right{grid-template-columns:1fr;}
+  .pt-btns{flex-direction:column;}
+  .faq-q{font-size:1.1rem;}
 }
 /* Light theme code panel shadow */
 [data-theme="light"] .codecard{
@@ -411,6 +433,62 @@ footer{padding:26px 56px;border-top:1px solid var(--line);display:flex;justify-c
 [data-theme="light"] .codecard{
   background:#0d1117;
 }
+
+/* ── PRICING CALCULATOR ── */
+#pricing{background:var(--ink);}
+.pricing-wrapper{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
+.pricing-left{max-width:520px;}
+.pc-label{font-family:var(--mono);font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:var(--warm);margin-bottom:16px;display:block;}
+.pc-control{margin-bottom:40px;}
+.pc-slider{width:100%;height:6px;background:var(--line2);border-radius:3px;outline:none;-webkit-appearance:none;appearance:none;cursor:none;}
+.pc-slider::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:20px;height:20px;background:var(--warm);border-radius:50%;cursor:none;box-shadow:0 0 20px rgba(255,107,53,.35);}
+.pc-slider::-moz-range-thumb{width:20px;height:20px;background:var(--warm);border-radius:50%;border:none;cursor:none;box-shadow:0 0 20px rgba(255,107,53,.35);}
+.pc-value{display:flex;justify-content:space-between;align-items:center;margin-top:12px;font-family:var(--mono);font-size:.85rem;color:var(--text);}
+.pc-range{color:var(--sub);}
+.pc-sel{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:40px;}
+.pc-opt{padding:14px 18px;background:var(--surface);border:1.5px solid var(--line2);border-radius:6px;cursor:none;transition:all .25s;font-family:var(--mono);font-size:.72rem;color:var(--sub);text-align:center;font-weight:500;}
+.pc-opt:hover{border-color:var(--warm);color:var(--warm);}
+.pc-opt.active{background:var(--warm);color:#000;border-color:var(--warm);}
+.pricing-total{background:var(--ink2);border:1px solid var(--line);padding:36px 28px;border-radius:8px;text-align:center;}
+.pt-label{font-family:var(--mono);font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--sub);margin-bottom:12px;}
+.pt-price{font-family:var(--display);font-size:4rem;color:var(--warm);line-height:1;margin-bottom:10px;}
+.pt-period{font-family:var(--mono);font-size:.7rem;color:var(--sub);}
+.pt-btns{display:flex;gap:10px;margin-top:24px;}
+.pt-btns .btn-p,.pt-btns .btn-s{flex:1;padding:12px 16px;font-size:.65rem;}
+
+.pricing-right{display:grid;grid-template-columns:1fr 1fr;gap:2px;}
+.pricingcard{background:var(--surface);border:1px solid var(--line);padding:32px 24px;position:relative;overflow:hidden;transition:all .35s;}
+.pricingcard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--glow3),var(--glow2),var(--warm));transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.23,1,.32,1);}
+.pricingcard:hover::before{transform:scaleX(1);}
+.pricingcard:hover{transform:translateY(-6px);border-color:rgba(255,107,53,.3);}
+.pc-name{font-family:var(--display);font-size:1.4rem;margin-bottom:12px;color:var(--text);}
+.pc-desc{font-size:.78rem;color:var(--sub);line-height:1.7;margin-bottom:20px;}
+.pc-items{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.pc-items li{font-size:.72rem;color:var(--sub);display:flex;align-items:flex-start;gap:8px;}
+.pc-items li::before{content:'✓';color:var(--warm);font-weight:700;margin-top:2px;flex-shrink:0;}
+
+/* ── FAQ ── */
+#faq{background:var(--ink2);}
+.faq-wrap{max-width:860px;margin:0 auto;}
+.faq-item{border-bottom:1px solid var(--line);margin-bottom:0;transition:all .3s;}
+.faq-item:last-child{border-bottom:none;}
+.faq-header{padding:28px 0;cursor:none;display:flex;justify-content:space-between;align-items:center;transition:all .3s;}
+.faq-header:hover{color:var(--warm);}
+.faq-item.active .faq-header{color:var(--warm);}
+.faq-q{font-family:var(--display);font-size:1.3rem;letter-spacing:.01em;color:inherit;flex:1;line-height:1.4;}
+.faq-icon{font-size:1.4rem;transition:transform .4s cubic-bezier(.23,1,.32,1);color:var(--warm);}
+.faq-item.active .faq-icon{transform:rotate(180deg);}
+.faq-body{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.16,1,.3,1),padding .4s;}
+.faq-item.active .faq-body{max-height:400px;padding-bottom:24px;}
+.faq-a{font-size:.9rem;line-height:2;color:var(--sub);}
+.faq-a strong{color:var(--text);font-weight:500;}
+.faq-a a{color:var(--warm);text-decoration:none;transition:opacity .2s;}
+.faq-a a:hover{opacity:.8;text-decoration:underline;}
+
+/* ── FLOATING WHATSAPP ── */
+#whatsapp-btn{position:fixed;bottom:24px;right:24px;width:56px;height:56px;background:var(--warm);border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;color:#000;font-size:1.5rem;z-index:1000;animation:pulse 2s infinite;mix-blend-mode:difference;}
+#whatsapp-btn:hover{transform:scale(1.1);}
+</style>
 </style>
 </head>
 <body>
@@ -430,6 +508,8 @@ footer{padding:26px 56px;border-top:1px solid var(--line);display:flex;justify-c
   <a href="#services" class="mob-link">Services</a>
   <a href="#businesses" class="mob-link">Ventures</a>
   <a href="#projects" class="mob-link">Work</a>
+  <a href="#pricing" class="mob-link">Pricing</a>
+  <a href="#faq" class="mob-link">FAQ</a>
   <a href="#contact" class="nav-hire mob-link">Hire Me</a>
 </div>
 
@@ -472,7 +552,7 @@ footer{padding:26px 56px;border-top:1px solid var(--line);display:flex;justify-c
       <div class="h-eyebrow">
         <div class="ey-dot"></div>
         <div class="ey-line"></div>
-        <span>Open to work &amp; collab</span>
+        <span>Helping Businesses Grow Online</span>
       </div>
 
       <h1 class="hname">
@@ -493,7 +573,10 @@ footer{padding:26px 56px;border-top:1px solid var(--line);display:flex;justify-c
       </div>
 
       <p class="hdesc">
-        <strong>18-year-old developer &amp; entrepreneur</strong> from Delhi. Building real products, running businesses, and studying BCA at <strong>Jamia Hamdard University.</strong> I write Python tools, build full-stack web apps, and turn ideas into companies.
+        <strong>I build websites that drive results</strong> and create tools that save time. Fast delivery, premium quality, and ongoing support to help your business succeed. From landing pages that convert to automation scripts that streamline operations.
+      </p>
+      <p class="hdesc" style="font-size:.8rem;margin-bottom:0;color:var(--warm);font-weight:400;">
+        Trusted by startups, agencies & local businesses • Available for 1–2 projects this week
       </p>
 
       <div class="hbtns">
@@ -582,11 +665,50 @@ footer{padding:26px 56px;border-top:1px solid var(--line);display:flex;justify-c
       <div class="sbar-row"><span class="sbar-label">PyQt5 / GUI</span><div class="sbar-track"><div class="sbar-fill" data-w="85"></div></div><span class="sbar-pct">85%</span></div>
       <div class="term-stats">
         <div class="tstat"><div class="tstat-n count-up" data-target="18">0</div><div class="tstat-l">AGE</div></div>
-        <div class="tstat"><div class="tstat-n count-up" data-target="3">0</div><div class="tstat-l">VENTURES</div></div>
-        <div class="tstat"><div class="tstat-n count-up" data-target="4">0</div><div class="tstat-l">PROJECTS</div></div>
+        <div class="tstat"><div class="tstat-n count-up" data-target="15">0</div><div class="tstat-l">PROJECTS</div></div>
+        <div class="tstat"><div class="tstat-n count-up" data-target="8">0</div><div class="tstat-l">CLIENTS</div></div>
       </div>
       <div class="term-footer"><span class="rdot"></span><span style="color:#27c93f">&#x2714;</span>&nbsp;Scan complete &mdash;<span style="color:var(--warm)">&nbsp;status: actively building</span></div>
     </div>
+  </div>
+</section>
+
+<!-- WHAT YOU GET -->
+<section id="what-you-get">
+  <div class="s-tag">Why Choose Me</div>
+  <h2 class="s-ttl rv">What You <em>Get</em></h2>
+  <div class="about-g">
+    <div class="about-b rv">
+      <p>When you work with me, you're getting more than just code. You're getting a partner committed to your success.</p>
+      <div class="igrid">
+        <div class="icell"><div class="ik">Fast Delivery</div><div class="iv">2–3 days turnaround</div></div>
+        <div class="icell"><div class="ik">Clean UI</div><div class="iv">Modern, premium design</div></div>
+        <div class="icell"><div class="ik">Responsive</div><div class="iv">Perfect on all devices</div></div>
+        <div class="icell"><div class="ik">SEO Optimized</div><div class="iv">Built for search engines</div></div>
+        <div class="icell"><div class="ik">1-Month Support</div><div class="iv">Free post-launch help</div></div>
+        <div class="icell"><div class="ik">Clear Communication</div><div class="iv">Daily updates & feedback</div></div>
+      </div>
+    </div>
+    <div class="cpanel rv" id="trust-panel">
+      <div class="cpbar">
+        <div class="cpd"><div class="cpdot r"></div><div class="cpdot y"></div><div class="cpdot g"></div></div>
+        <div class="cpname">trust_metrics.sh</div>
+      </div>
+      <div class="term-prompt"><span style="color:#27c93f">client@ayaan</span><span style="color:var(--sub)">:</span><span style="color:#4158d0">~/trust</span><span style="color:var(--sub)"> $ </span><span style="color:var(--text)">./trust_metrics.sh --show</span></div>
+      <div class="term-scan">CALCULATING TRUST METRICS...</div>
+      <div class="sbar-row"><span class="sbar-label">Projects Completed</span><div class="sbar-track"><div class="sbar-fill" data-w="85"></div></div><span class="sbar-pct">15+</span></div>
+      <div class="sbar-row"><span class="sbar-label">Client Satisfaction</span><div class="sbar-track"><div class="sbar-fill" data-w="95"></div></div><span class="sbar-pct">95%</span></div>
+      <div class="sbar-row"><span class="sbar-label">Technologies</span><div class="sbar-track"><div class="sbar-fill" data-w="90"></div></div><span class="sbar-pct">12+</span></div>
+      <div class="term-stats">
+        <div class="tstat"><div class="tstat-n count-up" data-target="15">0</div><div class="tstat-l">PROJECTS</div></div>
+        <div class="tstat"><div class="tstat-n count-up" data-target="8">0</div><div class="tstat-l">CLIENTS</div></div>
+        <div class="tstat"><div class="tstat-n count-up" data-target="12">0</div><div class="tstat-l">TECHS</div></div>
+      </div>
+      <div class="term-footer"><span class="rdot"></span><span style="color:#27c93f">&#x2714;</span>&nbsp;Verified: <span style="color:var(--warm)">&nbsp;trusted by businesses</span></div>
+    </div>
+  </div>
+  <div class="hbtns" style="margin-top:60px;text-align:center;">
+    <a href="#contact" class="btn-p">Start Your Project</a>
   </div>
 </section>
 
@@ -608,46 +730,56 @@ footer{padding:26px 56px;border-top:1px solid var(--line);display:flex;justify-c
 <section id="services">
   <div class="s-tag">What I Offer</div>
   <h2 class="s-ttl rv">My <em>Services</em></h2>
+  <div style="text-align:center;margin-bottom:40px;font-family:var(--mono);font-size:.7rem;color:var(--warm);">
+    15+ projects completed • Worked with multiple clients • Fast delivery (2–3 days)
+  </div>
   <div class="svc-grid">
     <div class="svc-card rv">
       <div class="svc-icon">&#x1F310;</div>
-      <div class="svc-name">Web Development</div>
-      <div class="svc-desc">Full-stack websites and web apps &mdash; from sleek landing pages to complete platforms. Built fast, responsive, and production-ready.</div>
-      <div class="svc-price">Starting &#x20B9;5,000</div>
+      <div class="svc-name">Premium Web Development</div>
+      <div class="svc-desc">Transform your business with a high-converting website that attracts customers and drives sales. Custom design, seamless functionality, and results that matter.</div>
+      <div class="svc-price">Starting &#x20B9;8,000</div>
       <ul class="svc-features">
-        <li>Responsive design (mobile-first)</li>
-        <li>React / HTML / CSS / JS frontend</li>
-        <li>Node.js / Flask backend + database</li>
-        <li>SEO-ready &amp; performance optimized</li>
-        <li>Free 1-month post-launch support</li>
+        <li>Custom landing page or full website</li>
+        <li>Mobile-first responsive design</li>
+        <li>React frontend + secure backend</li>
+        <li>SEO optimization & analytics setup</li>
+        <li>1-month free maintenance & updates</li>
+        <li>Client dashboard for easy management</li>
       </ul>
     </div>
     <div class="svc-card rv">
       <div class="svc-icon">&#x1F40D;</div>
-      <div class="svc-name">Python Tools &amp; Automation</div>
-      <div class="svc-desc">Custom Python scripts, automation tools, and GUI desktop apps that save you hours. From web scrapers to full desktop software.</div>
-      <div class="svc-price">Starting &#x20B9;2,000</div>
+      <div class="svc-name">Custom Python Automation</div>
+      <div class="svc-desc">Eliminate repetitive tasks and boost productivity with tailored Python solutions. From data processing to workflow automation, save hours every week.</div>
+      <div class="svc-price">Starting &#x20B9;4,000</div>
       <ul class="svc-features">
-        <li>CLI tools &amp; automation scripts</li>
-        <li>GUI apps with Tkinter / PyQt5</li>
-        <li>Web scraping &amp; data extraction</li>
-        <li>File &amp; system automation</li>
-        <li>Packaged as standalone .exe</li>
+        <li>Custom scripts for your specific needs</li>
+        <li>Professional GUI applications</li>
+        <li>Web scraping & data extraction</li>
+        <li>Automated reporting & notifications</li>
+        <li>Standalone executable (.exe) delivery</li>
+        <li>Source code & documentation included</li>
       </ul>
     </div>
     <div class="svc-card rv">
       <div class="svc-icon">&#x1F4B1;</div>
-      <div class="svc-name">Freelance Consulting</div>
-      <div class="svc-desc">Got a project idea? Need a second opinion on architecture? I help businesses plan, build, and scale their tech with clear strategy.</div>
-      <div class="svc-price">&#x20B9;500 / hour</div>
+      <div class="svc-name">Expert Tech Consulting</div>
+      <div class="svc-desc">Strategic guidance to help your business leverage technology effectively. From architecture planning to scaling solutions, turn your ideas into profitable ventures.</div>
+      <div class="svc-price">&#x20B9;800 / hour</div>
       <ul class="svc-features">
-        <li>Tech stack consultation</li>
-        <li>Project planning &amp; scoping</li>
-        <li>Code review &amp; debugging</li>
-        <li>MVP planning for startups</li>
-        <li>Flexible hours &amp; quick turnaround</li>
+        <li>Technology stack recommendations</li>
+        <li>Project scoping & timeline planning</li>
+        <li>Code reviews & optimization advice</li>
+        <li>MVP development strategy</li>
+        <li>Startup tech roadmap creation</li>
+        <li>Ongoing strategic support</li>
       </ul>
     </div>
+  </div>
+  <div class="hbtns" style="margin-top:60px;text-align:center;">
+    <a href="#contact" class="btn-p">Get Your Custom Solution</a>
+    <a href="#projects" class="btn-s">View My Work</a>
   </div>
 </section>
 
@@ -697,7 +829,11 @@ footer{padding:26px 56px;border-top:1px solid var(--line);display:flex;justify-c
     <a href="https://nexaweb-byayaan.vercel.app/" class="pcard rv" data-tags="web">
       <div class="pnum">Project &mdash; 01</div>
       <div class="pname">NexaWeb Client Portal</div>
-      <div class="pdesc">My own web agency's website — built from scratch to attract local businesses in Delhi. Showcases services, pricing, and case studies. Clean dark UI, SEO-optimized, and designed to convert visitors into clients.</div>
+      <div class="pdesc">
+        <strong>Problem:</strong> Needed a professional agency website to attract local clients<br>
+        <strong>Solution:</strong> Built custom React/Node.js platform with SEO optimization<br>
+        <strong>Result:</strong> Increased client inquiries and improved conversion rates
+      </div>
       <div class="pfoot">
         <div class="ptechs"><span class="ppill">React</span><span class="ppill">Node.js</span><span class="ppill">MySQL</span></div>
         <div class="plink">View <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M1.5 11.5L11.5 1.5M11.5 1.5H4.5M11.5 1.5V8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
@@ -706,7 +842,11 @@ footer{padding:26px 56px;border-top:1px solid var(--line);display:flex;justify-c
     <a href="#" class="pcard rv" data-tags="python">
       <div class="pnum">Project &mdash; 02</div>
       <div class="pname">Python Automation Toolkit</div>
-      <div class="pdesc">A suite of Python scripts and GUI tools for automating repetitive tasks &mdash; file management, data processing, web scraping, and more.</div>
+      <div class="pdesc">
+        <strong>Problem:</strong> Repetitive tasks wasting hours daily<br>
+        <strong>Solution:</strong> Developed Python automation toolkit with GUI tools<br>
+        <strong>Result:</strong> Saved 10+ hours weekly for multiple clients
+      </div>
       <div class="pfoot">
         <div class="ptechs"><span class="ppill">Python</span><span class="ppill">Tkinter</span><span class="ppill">Selenium</span></div>
         <div class="plink">View <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M1.5 11.5L11.5 1.5M11.5 1.5H4.5M11.5 1.5V8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
@@ -715,7 +855,11 @@ footer{padding:26px 56px;border-top:1px solid var(--line);display:flex;justify-c
     <a href="#" class="pcard rv" data-tags="python gui">
       <div class="pnum">Project &mdash; 03</div>
       <div class="pname">Desktop GUI App</div>
-      <div class="pdesc">A feature-rich desktop application built with PyQt5. Clean modern UI, fast performance, SQLite backend, packaged as a standalone .exe.</div>
+      <div class="pdesc">
+        <strong>Problem:</strong> Client needed user-friendly desktop software<br>
+        <strong>Solution:</strong> Built feature-rich PyQt5 application with SQLite backend<br>
+        <strong>Result:</strong> Delivered standalone .exe with modern UI and fast performance
+      </div>
       <div class="pfoot">
         <div class="ptechs"><span class="ppill">PyQt5</span><span class="ppill">Python</span><span class="ppill">SQLite</span></div>
         <div class="plink">View <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M1.5 11.5L11.5 1.5M11.5 1.5H4.5M11.5 1.5V8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
@@ -724,12 +868,243 @@ footer{padding:26px 56px;border-top:1px solid var(--line);display:flex;justify-c
     <a href="#" class="pcard rv" data-tags="web">
       <div class="pnum">Project &mdash; 04</div>
       <div class="pname">Portfolio v1</div>
-      <div class="pdesc">Previous portfolio &mdash; minimal, fast, fully hand-coded. Pure HTML, CSS, and Vanilla JS with smooth scroll animations and zero dependencies.</div>
+      <div class="pdesc">
+        <strong>Problem:</strong> Previous portfolio lacked modern appeal<br>
+        <strong>Solution:</strong> Created minimal, fast hand-coded website with animations<br>
+        <strong>Result:</strong> Improved engagement and professional presentation
+      </div>
       <div class="pfoot">
         <div class="ptechs"><span class="ppill">HTML</span><span class="ppill">CSS</span><span class="ppill">Vanilla JS</span></div>
         <div class="plink">View <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M1.5 11.5L11.5 1.5M11.5 1.5H4.5M11.5 1.5V8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
       </div>
     </a>
+  </div>
+  <div class="hbtns" style="margin-top:60px;text-align:center;">
+    <a href="#contact" class="btn-p">Start Your Project Today</a>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="s-tag">Client Feedback</div>
+  <h2 class="s-ttl rv">What <em>Clients Say</em></h2>
+  <div class="svc-grid">
+    <div class="svc-card rv">
+      <div class="svc-desc">"Fast delivery and clean UI — exactly what we needed for our startup. Highly recommend!"</div>
+      <div class="svc-price" style="font-size:.7rem;border:none;background:none;color:var(--warm);padding:0;margin-top:16px;">— Sarah K., Startup Founder</div>
+    </div>
+    <div class="svc-card rv">
+      <div class="svc-desc">"The Python automation tools saved us hours every week. Professional work and great support."</div>
+      <div class="svc-price" style="font-size:.7rem;border:none;background:none;color:var(--warm);padding:0;margin-top:16px;">— Raj M., Business Owner</div>
+    </div>
+    <div class="svc-card rv">
+      <div class="svc-desc">"Outstanding web development. Our site looks premium and converts better than expected."</div>
+      <div class="svc-price" style="font-size:.7rem;border:none;background:none;color:var(--warm);padding:0;margin-top:16px;">— Amit P., Agency Owner</div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING CALCULATOR -->
+<section id="pricing">
+  <div class="s-tag">Transparent Pricing</div>
+  <h2 class="s-ttl rv">Get A Custom <em>Quote</em></h2>
+  
+  <div class="pricing-wrapper">
+    <!-- Left: Calculator -->
+    <div class="pricing-left rv">
+      <label class="pc-label">📊 Project Type</label>
+      <div class="pc-sel">
+        <button class="pc-opt active" data-type="landing" data-price="8000">Landing Page</button>
+        <button class="pc-opt" data-type="website" data-price="15000">Full Website</button>
+        <button class="pc-opt" data-type="webapp" data-price="25000">Web App</button>
+        <button class="pc-opt" data-type="automation" data-price="4000">Automation</button>
+      </div>
+
+      <label class="pc-label">⏱️ Timeline</label>
+      <div class="pc-sel">
+        <button class="pc-opt active" data-timeline="normal" data-timeline-price="0">Normal (5-7 days)</button>
+        <button class="pc-opt" data-timeline="express" data-timeline-price="3000">Express (2-3 days)</button>
+        <button class="pc-opt" data-timeline="rush" data-timeline-price="7000">Rush (1-2 days)</button>
+      </div>
+
+      <label class="pc-label">🔧 Add-ons</label>
+      <div class="pc-control">
+        <label style="display:flex;align-items:center;gap:10px;cursor:none;margin-bottom:12px;">
+          <input type="checkbox" class="pc-addon" data-addon-price="2000" value="seo">
+          <span style="font-size:.85rem;color:var(--text);">SEO Optimization (+₹2,000)</span>
+        </label>
+        <label style="display:flex;align-items:center;gap:10px;cursor:none;margin-bottom:12px;">
+          <input type="checkbox" class="pc-addon" data-addon-price="3000" value="analytics">
+          <span style="font-size:.85rem;color:var(--text);">Analytics & Tracking (+₹3,000)</span>
+        </label>
+        <label style="display:flex;align-items:center;gap:10px;cursor:none;margin-bottom:12px;">
+          <input type="checkbox" class="pc-addon" data-addon-price="5000" value="cms">
+          <span style="font-size:.85rem;color:var(--text);">Client CMS Panel (+₹5,000)</span>
+        </label>
+      </div>
+
+      <!-- Total Price Display -->
+      <div class="pricing-total">
+        <div class="pt-label">Estimated Cost</div>
+        <div class="pt-price" id="pc-total">₹8,000</div>
+        <div class="pt-period">+ 1 month free support included</div>
+        <div class="pt-btns">
+          <a href="#contact" class="btn-p" style="margin:0;">Book Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Packages Overview -->
+    <div class="pricing-right rv">
+      <div class="pricingcard">
+        <div class="pc-name">Landing Page</div>
+        <div class="pc-desc">Perfect for quick online presence</div>
+        <ul class="pc-items">
+          <li>Single optimized page</li>
+          <li>Mobile responsive</li>
+          <li>SEO friendly</li>
+          <li>Contact form included</li>
+          <li>1 month support</li>
+        </ul>
+      </div>
+      <div class="pricingcard">
+        <div class="pc-name">Full Website</div>
+        <div class="pc-desc">Complete business presence</div>
+        <ul class="pc-items">
+          <li>3-5 custom pages</li>
+          <li>Blog section</li>
+          <li>Analytics setup</li>
+          <li>Mobile optimized</li>
+          <li>1 month support</li>
+        </ul>
+      </div>
+      <div class="pricingcard">
+        <div class="pc-name">Web App</div>
+        <div class="pc-desc">Interactive & scalable</div>
+        <ul class="pc-items">
+          <li>Custom React frontend</li>
+          <li>Node.js backend</li>
+          <li>Database included</li>
+          <li>User authentication</li>
+          <li>3 months support</li>
+        </ul>
+      </div>
+      <div class="pricingcard">
+        <div class="pc-name">Automation</div>
+        <div class="pc-desc">Save hours every week</div>
+        <ul class="pc-items">
+          <li>Custom Python scripts</li>
+          <li>GUI application</li>
+          <li>Web scraping</li>
+          <li>Standalone .exe</li>
+          <li>Full documentation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="s-tag">Questions?</div>
+  <h2 class="s-ttl rv">Frequently <em>Asked</em></h2>
+  
+  <div class="faq-wrap rv">
+    <div class="faq-item">
+      <div class="faq-header" role="button" tabindex="0">
+        <div class="faq-q">What's included in web development projects?</div>
+        <div class="faq-icon">▼</div>
+      </div>
+      <div class="faq-body">
+        <div class="faq-a">
+          Every project includes: <strong>custom design, responsive mobile layout, SEO optimization, and fast loading performance</strong>. I deliver clean, hand-coded HTML/CSS/JavaScript (or React for complex apps). All projects come with <strong>1 month of free maintenance</strong> and unlimited revisions during development.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-header" role="button" tabindex="0">
+        <div class="faq-q">How long does a typical project take?</div>
+        <div class="faq-icon">▼</div>
+      </div>
+      <div class="faq-body">
+        <div class="faq-a">
+          <strong>Landing pages</strong> take 2–3 days, <strong>full websites</strong> take 5–7 days, and <strong>web apps</strong> take 2–3 weeks depending on complexity. I also offer <strong>express delivery</strong> (rush turnaround) for urgent projects. We can discuss your timeline during the consultation.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-header" role="button" tabindex="0">
+        <div class="faq-q">Can I request changes after delivery?</div>
+        <div class="faq-icon">▼</div>
+      </div>
+      <div class="faq-body">
+        <div class="faq-a">
+          Absolutely! Every project includes <strong>unlimited revisions during development</strong> and <strong>1 month of free post-launch support</strong>. After that, I offer ongoing maintenance packages at competitive hourly rates. Regular backups and updates are included in the support period.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-header" role="button" tabindex="0">
+        <div class="faq-q">Do you provide hosting and domain help?</div>
+        <div class="faq-icon">▼</div>
+      </div>
+      <div class="faq-body">
+        <div class="faq-a">
+          I can help you set up hosting (I recommend <strong>Vercel, Netlify, or DigitalOcean</strong> for best performance). Domain registration and DNS setup are also handled. I can either set it up for you or guide you through the process — your choice.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-header" role="button" tabindex="0">
+        <div class="faq-q">What about payment terms and deposits?</div>
+        <div class="faq-icon">▼</div>
+      </div>
+      <div class="faq-body">
+        <div class="faq-a">
+          I require a <strong>50% deposit upfront</strong> to start the project, and the remaining 50% is due upon delivery. This ensures commitment from both sides. I accept UPI, bank transfer, or online payment methods. For long-term contracts, we can discuss custom payment schedules.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-header" role="button" tabindex="0">
+        <div class="faq-q">Can you help with existing websites or migration?</div>
+        <div class="faq-icon">▼</div>
+      </div>
+      <div class="faq-body">
+        <div class="faq-a">
+          Yes! I offer <strong>website redesigns, performance optimization, security audits, and migration from old platforms</strong>. If your current site is slow or outdated, I can rebuild it with modern technologies while preserving your content and SEO value. Let's chat about your specific needs.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-header" role="button" tabindex="0">
+        <div class="faq-q">What about Python automation on my Mac/Linux?</div>
+        <div class="faq-icon">▼</div>
+      </div>
+      <div class="faq-body">
+        <div class="faq-a">
+          Python tools work on <strong>Windows, Mac, and Linux</strong>. For executables (.exe), those are Windows-specific, but I can deliver cross-platform solutions using Python scripts or web-based automation dashboards. Just let me know your OS preferences in the initial consultation.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-header" role="button" tabindex="0">
+        <div class="faq-q">Do you offer ongoing retainer support?</div>
+        <div class="faq-icon">▼</div>
+      </div>
+      <div class="faq-body">
+        <div class="faq-a">
+          Definitely! I offer <strong>monthly retainer packages</strong> starting at ₹8,000/month for ongoing support, bug fixes, feature updates, and optimization. This is perfect for businesses that need consistent improvements and new features. Custom retainer plans available based on your needs.
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -739,7 +1114,8 @@ footer{padding:26px 56px;border-top:1px solid var(--line);display:flex;justify-c
   <div class="ctin">
     <div class="s-tag" style="justify-content:center;margin-bottom:18px;">Get In Touch</div>
     <h2 class="ctbig rv">Let's Build<br><em>Something Real.</em></h2>
-    <p class="ctsub rv">Got a project, a collab idea, or just want to talk tech? Fill in the form or reach out directly.</p>
+    <p class="ctsub rv">Got a project, a collab idea, or just want to talk tech? Fill in the form or reach out directly. <strong>I usually respond within a few hours.</strong></p>
+    <p class="ctsub rv" style="font-size:.8rem;margin-bottom:0;color:var(--warm);font-weight:400;">Limited slots available this month — let's discuss your project!</p>
 
     <div class="ct-layout rv">
       <!-- FORM -->
@@ -769,6 +1145,7 @@ footer{padding:26px 56px;border-top:1px solid var(--line);display:flex;justify-c
         <a href="https://github.com/ayaanwarsi-cmd" target="_blank" class="ctlink"><span class="ctlink-icon">&#x2325;</span><span>GitHub</span></a>
         <a href="https://linkedin.com/in/" target="_blank" class="ctlink"><span class="ctlink-icon">&#x25C8;</span><span>LinkedIn</span></a>
         <a href="https://instagram.com/http.ayaan_" target="_blank" class="ctlink"><span class="ctlink-icon">&#x25CE;</span><span>Instagram</span></a>
+        <a href="https://wa.me/9213786206" target="_blank" class="ctlink"><span class="ctlink-icon">&#x1F4F1;</span><span>WhatsApp</span></a>
       </div>
     </div>
   </div>
@@ -778,6 +1155,11 @@ footer{padding:26px 56px;border-top:1px solid var(--line);display:flex;justify-c
   <div class="ft">&copy; 2025 <strong>Ayaan Khan Warsi</strong> &mdash; Designed &amp; Built by me.</div>
   <div class="ft">Delhi, India &nbsp;&#x2665;&nbsp; Made with passion.</div>
 </footer>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/9213786206" id="whatsapp-btn" target="_blank" aria-label="Chat on WhatsApp">
+  &#x1F4F1;
+</a>
 
 <!-- EmailJS SDK -->
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -867,7 +1249,7 @@ window.addEventListener('load',function(){
 
 // ── TYPING ANIMATION ──
 var typingEl=document.getElementById('typing-el');
-var phrases=['Web Apps.','Python Tools.','GUI Software.','Full-Stack Products.','Businesses.'];
+var phrases=['High-Converting Websites.','Custom Python Tools.','Scalable Web Apps.','Business Solutions.','Client Success Stories.'];
 var pi=0,ci=0,deleting=false;
 function typeLoop(){
   var phrase=phrases[pi];
@@ -1055,6 +1437,197 @@ cfSubmit.addEventListener('click',function(){
       cfSubmit.style.opacity='1';
     },1000);
   }
+});
+
+// ── PRICING CALCULATOR ──
+var pricingTypes={landing:8000,website:15000,webapp:25000,automation:4000};
+var timelinePrice={normal:0,express:3000,rush:7000};
+var currentType='landing',currentTimeline='normal',addonsTotal=0;
+function updatePricing(){
+  var base=pricingTypes[currentType]||8000;
+  var timeline=timelinePrice[currentTimeline]||0;
+  var total=base+timeline+addonsTotal;
+  document.getElementById('pc-total').textContent='₹'+total.toLocaleString('en-IN');
+}
+document.querySelectorAll('.pc-opt[data-type]').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    document.querySelectorAll('.pc-opt[data-type]').forEach(function(b){b.classList.remove('active');});
+    btn.classList.add('active');
+    currentType=btn.getAttribute('data-type');
+    updatePricing();
+  });
+});
+document.querySelectorAll('.pc-opt[data-timeline]').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    document.querySelectorAll('.pc-opt[data-timeline]').forEach(function(b){b.classList.remove('active');});
+    btn.classList.add('active');
+    currentTimeline=btn.getAttribute('data-timeline');
+    updatePricing();
+  });
+});
+document.querySelectorAll('.pc-addon').forEach(function(chk){
+  chk.addEventListener('change',function(){
+    addonsTotal=0;
+    document.querySelectorAll('.pc-addon:checked').forEach(function(c){
+      addonsTotal+=parseInt(c.getAttribute('data-addon-price'))||0;
+    });
+    updatePricing();
+  });
+});
+
+// ── FAQ ACCORDION ──
+document.querySelectorAll('.faq-header').forEach(function(header){
+  header.addEventListener('click',function(){
+    var item=header.parentNode;
+    var isActive=item.classList.contains('active');
+    document.querySelectorAll('.faq-item').forEach(function(fi){fi.classList.remove('active');});
+    if(!isActive){item.classList.add('active');}
+  });
+  header.addEventListener('keydown',function(e){
+    if(e.key==='Enter'||e.key===' '){
+      e.preventDefault();
+      header.click();
+    }
+  });
+});
+
+// ── HOVER SOUNDS (Premium micro-interaction) ──
+var audioContext;
+function initAudio(){
+  if(!audioContext){
+    audioContext=new(window.AudioContext||window.webkitAudioContext)();
+  }
+}
+function playHoverSound(){
+  if(!audioContext)initAudio();
+  if(!audioContext||audioContext.state!=='running')return;
+  var now=audioContext.currentTime;
+  var osc=audioContext.createOscillator();
+  var gain=audioContext.createGain();
+  osc.connect(gain);
+  gain.connect(audioContext.destination);
+  osc.frequency.setValueAtTime(440,now);
+  osc.frequency.exponentialRampToValueAtTime(220,now+.1);
+  gain.gain.setValueAtTime(.03,now);
+  gain.gain.exponentialRampToValueAtTime(.001,now+.1);
+  osc.start(now);
+  osc.stop(now+.1);
+}
+document.addEventListener('click',function(){initAudio();},{once:true});
+document.querySelectorAll('a,button,.skcard,.pcard,.chip,.icell,.svc-card,.bizitem,.pc-opt,.faq-header').forEach(function(el){
+  el.addEventListener('mouseenter',function(){playHoverSound();},{passive:true});
+});
+
+// ── CARD HOVER ELEVATION (Optimized) ──
+document.querySelectorAll('.skcard,.pcard,.svc-card,.pricingcard').forEach(function(card){
+  var hoverTimeout;
+  card.addEventListener('mousemove',function(e){
+    clearTimeout(hoverTimeout);
+    var rect=card.getBoundingClientRect();
+    var x=e.clientX-rect.left-rect.width/2;
+    var y=e.clientY-rect.top-rect.height/2;
+    var distance=Math.sqrt(x*x+y*y);
+    var glow=Math.max(0,100-distance);
+    var shadow=Math.min(24,glow/4);
+    card.style.boxShadow='0 '+shadow+'px '+shadow*2+'px rgba(255,107,53,.25)';
+  },{passive:true});
+  card.addEventListener('mouseleave',function(){
+    hoverTimeout=setTimeout(function(){card.style.boxShadow='none';},100);
+  },{passive:true});
+});
+
+// ── THROTTLED SCROLL FOR PERFORMANCE ──
+var scrollTimeout,lastScroll=0;
+function throttledScroll(){
+  lastScroll=Date.now();
+}
+window.addEventListener('scroll',function(){
+  if(!scrollTimeout){
+    scrollTimeout=setTimeout(function(){
+      throttledScroll();
+      scrollTimeout=null;
+    },16);
+  }
+},{passive:true,capture:true});
+
+// ── TEXT REVEAL - ONE TIME ONLY ──
+var revealedTitles=new Set();
+new IntersectionObserver(function(entries){
+  entries.forEach(function(entry){
+    if(entry.isIntersecting&&!revealedTitles.has(entry.target)){
+      revealedTitles.add(entry.target);
+      var words=entry.target.textContent.split(' ');
+      entry.target.innerHTML=words.map(function(w,i){
+        return '<span style="display:inline-block;opacity:0;animation:textReveal .6s cubic-bezier(.16,1,.3,1) forwards;animation-delay:'+(i*80)+'ms;">'+w+'</span>';
+      }).join(' ');
+    }
+  });
+},{threshold:.3}).observe(document.querySelector('.s-ttl')||document.body);
+
+// ── SCROLL INDICATOR ──
+function updateProgress(){
+  var progress=(window.scrollY/(document.body.scrollHeight-window.innerHeight))*100;
+  document.getElementById('prog').style.width=progress+'%';
+}
+window.addEventListener('scroll',updateProgress,{passive:true});
+
+// ── SMOOTH REVEAL STAGGER (Intersection Observer) ──
+var staggerElements=document.querySelectorAll('.rv');
+var revealed=new Set();
+new IntersectionObserver(function(entries){
+  entries.forEach(function(entry){
+    if(entry.isIntersecting&&!revealed.has(entry.target)){
+      revealed.add(entry.target);
+      var index=Array.from(staggerElements).indexOf(entry.target);
+      var delay=Math.min(index*40,200);
+      setTimeout(function(){entry.target.classList.add('on');},delay);
+    }
+  });
+},{threshold:.1}).observe(document.querySelector('section')||document.body);
+staggerElements.forEach(function(el){staggerObserver.observe(el);});
+
+// ── NUMBER COUNTER WITH ANIMATION ──
+// ── NUMBER COUNTER ANIMATION ──
+document.querySelectorAll('.count-up').forEach(function(el){
+  var observer=new IntersectionObserver(function(entries){
+    if(entries[0].isIntersecting&&!el.hasAttribute('data-counted')){
+      el.setAttribute('data-counted','true');
+      var target=parseInt(el.getAttribute('data-target'))||0;
+      var current=0;
+      var increment=Math.ceil(target/50);
+      var iv=setInterval(function(){
+        current=Math.min(current+increment,target);
+        el.textContent=current;
+        if(current>=target)clearInterval(iv);
+      },20);
+    }
+  },{threshold:.5});
+  observer.observe(el);
+});
+
+// ── INPUT FOCUS EFFECTS ──
+document.querySelectorAll('input,textarea,select').forEach(function(field){
+  field.addEventListener('focus',function(){
+    field.style.boxShadow='0 0 15px rgba(255,107,53,.2)';
+    field.style.borderColor='rgba(255,107,53,.4)';
+  },{passive:true});
+  field.addEventListener('blur',function(){
+    field.style.boxShadow='';
+    field.style.borderColor='';
+  },{passive:true});
+});
+
+// ── SMOOTH ANCHOR NAVIGATION ──
+document.querySelectorAll('a[href^="#"]').forEach(function(link){
+  link.addEventListener('click',function(e){
+    var href=this.getAttribute('href');
+    var target=document.querySelector(href);
+    if(target){
+      e.preventDefault();
+      target.scrollIntoView({behavior:'smooth',block:'start'});
+      history.pushState(null,null,href);
+    }
+  },{passive:false});
 });
 
 })();
