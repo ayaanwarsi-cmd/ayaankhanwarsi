@@ -31,9 +31,10 @@
 <meta name="twitter:image" content="https://ayaankhanwarsi.vercel.app/og-image.png">
 
 <!-- ── FAVICON ── -->
-<link rel="icon" type="image/x-icon" href="assets/branding/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/branding/favicon.png">
-<link rel="apple-touch-icon" href="assets/branding/icon.png">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon.png">
 
 <!-- ── STRUCTURED DATA (Google rich results) ── -->
 <script type="application/ld+json">
@@ -133,22 +134,44 @@ body{background:var(--ink);color:var(--text);font-family:var(--body);overflow-x:
 ::-webkit-scrollbar-thumb{background:var(--warm);}
 
 /* ── NAV ── */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:26px 56px;display:flex;justify-content:space-between;align-items:center;transition:all .4s;}
-nav.solid{background:var(--nav-bg);backdrop-filter:blur(24px);padding:16px 56px;border-bottom:1px solid var(--line);}
-.logo{font-family:var(--display);font-size:1.5rem;letter-spacing:.05em;text-decoration:none;color:var(--text);display:flex;align-items:center;gap:12px;transition:all .3s cubic-bezier(.23,1,.32,1);height:52px;padding:0 8px;}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:20px 56px;display:flex;justify-content:space-between;align-items:center;transition:all .4s;}
+nav.solid{background:var(--nav-bg);backdrop-filter:blur(24px);padding:14px 56px;border-bottom:1px solid var(--line);}
+.logo{font-family:var(--display);font-size:1.5rem;letter-spacing:.05em;text-decoration:none;color:var(--text);display:flex;align-items:center;justify-content:center;gap:0;transition:all .3s cubic-bezier(.23,1,.32,1);height:56px;padding:0 4px;border-radius:var(--radius-sm);position:relative;flex-shrink:0;}
+.logo:hover{background:rgba(255,107,53,.04);}
 .logo em{color:var(--warm);font-style:normal;}
-.logo img{height:48px;width:auto;object-fit:contain;object-position:left center;filter:brightness(1);transition:all .35s cubic-bezier(.23,1,.32,1);}
-.logo:hover img{filter:brightness(1.08) drop-shadow(0 0 8px rgba(255,107,53,.2));}
-nav.solid .logo img{height:40px;}
-@media(max-width:960px){
-  .logo{height:44px;}
+.logo img{height:44px;width:auto;object-fit:contain;object-position:center;filter:brightness(1) contrast(1);transition:all .35s cubic-bezier(.23,1,.32,1);}
+.logo:hover img{filter:brightness(1.1) contrast(1.05) drop-shadow(0 0 6px rgba(255,107,53,.15));}
+nav.solid .logo{height:48px;padding:0 2px;}
+nav.solid .logo img{height:36px;}
+@media(max-width:1024px){
+  nav{padding:18px 44px;}
+  nav.solid{padding:13px 44px;}
+  .logo{height:52px;}
   .logo img{height:40px;}
-  nav.solid .logo img{height:36px;}
+  nav.solid .logo img{height:34px;}
+}
+@media(max-width:960px){
+  nav{padding:16px 32px;}
+  nav.solid{padding:12px 32px;}
+  .logo{height:48px;}
+  .logo img{height:36px;}
+  nav.solid .logo{height:44px;}
+  nav.solid .logo img{height:30px;}
+}
+@media(max-width:768px){
+  nav{padding:14px 24px;}
+  nav.solid{padding:10px 24px;}
+  .logo{height:44px;}
+  .logo img{height:32px;}
+  nav.solid .logo img{height:28px;}
 }
 @media(max-width:540px){
-  .logo{height:40px;gap:8px;}
-  .logo img{height:36px;}
-  nav.solid .logo img{height:32px;}
+  nav{padding:12px 16px;}
+  nav.solid{padding:9px 16px;}
+  .logo{height:40px;gap:0;}
+  .logo img{height:28px;}
+  nav.solid .logo{height:36px;}
+  nav.solid .logo img{height:24px;}
 }
 .nav-r{display:flex;align-items:center;gap:32px;}
 .nav-links{display:flex;align-items:center;gap:32px;}
@@ -417,12 +440,24 @@ section{padding:140px 56px;position:relative;}
 .ctlink-icon{font-size:1.2rem;flex-shrink:0;}
 
 /* ── FOOTER ── */
-footer{padding:26px 56px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;background:var(--ink2);}
-footer .ft{display:flex;align-items:center;gap:16px;}
-footer .ft-logo{height:32px;width:auto;object-fit:contain;object-position:left center;filter:brightness(.9);transition:all .35s cubic-bezier(.23,1,.32,1);}
-footer .ft-logo:hover{filter:brightness(1.1) drop-shadow(0 0 6px rgba(255,107,53,.15));}
+footer{padding:32px 56px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;background:var(--ink2);gap:32px;}
+footer .ft{display:flex;align-items:center;gap:12px;align-self:center;}
+footer .ft-logo{height:28px;width:auto;object-fit:contain;object-position:center;filter:brightness(.85) contrast(.95);transition:all .35s cubic-bezier(.23,1,.32,1);flex-shrink:0;}
+footer .ft-logo:hover{filter:brightness(1.05) contrast(1) drop-shadow(0 0 4px rgba(255,107,53,.12));}
+footer .ft:first-child .ft-logo{margin-right:4px;}
+footer .ft:first-child{flex:0 1 auto;}
+footer .ft:last-child{flex:0 1 auto;margin-left:auto;}
 .ft{font-family:var(--mono);font-size:.6rem;color:var(--sub);}
-.ft strong{color:var(--warm);}
+.ft strong{color:var(--warm);font-weight:600;}
+@media(max-width:1024px){
+  footer{padding:28px 44px;gap:24px;}
+  footer .ft{gap:10px;}
+  footer .ft-logo{height:26px;}
+}
+@media(max-width:960px){
+  footer{padding:24px 32px;gap:20px;}
+  footer .ft-logo{height:24px;}
+}
 
 /* ── MOBILE ── */
 @media(max-width:1024px){
@@ -431,8 +466,6 @@ footer .ft-logo:hover{filter:brightness(1.1) drop-shadow(0 0 6px rgba(255,107,53
   .pricing-right{grid-template-columns:1fr 1fr;}
 }
 @media(max-width:960px){
-  nav{padding:18px 22px;}
-  nav.solid{padding:14px 22px;}
   .nav-links{display:none;}
   .ham{display:flex;}
   .hero-inner{grid-template-columns:1fr!important;padding:110px 24px 60px!important;}
@@ -460,6 +493,10 @@ footer .ft-logo:hover{filter:brightness(1.1) drop-shadow(0 0 6px rgba(255,107,53
   .pricing-right{grid-template-columns:1fr;}
   .pt-btns{flex-direction:column;}
   .faq-q{font-size:1.1rem;}
+  footer{flex-direction:column;gap:12px;text-align:center;padding:20px 16px;}
+  footer .ft{width:100%;justify-content:center;}
+  footer .ft:last-child{margin-left:0;}
+  footer .ft-logo{height:22px;}
 }
 /* Light theme code panel shadow */
 [data-theme="light"] .codecard{
