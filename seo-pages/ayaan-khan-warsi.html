@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayaan Khan Warsi - Professional Web Developer & Software Engineer</title>
+  <meta name="description" content="Ayaan Khan Warsi is a professional web developer and software engineer in Delhi specializing in custom web solutions, full-stack development, and automation services.">
+  <meta name="keywords" content="Ayaan Khan Warsi, web developer, software engineer, full-stack developer, Delhi">
+  <meta name="author" content="Ayaan Khan Warsi">
+  <meta name="theme-color" content="#ff6b35">
+  <meta property="og:title" content="Ayaan Khan Warsi - Professional Web Developer">
+  <meta property="og:description" content="Professional web developer and software engineer specializing in custom solutions">
+  <meta property="og:type" content="business.business">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ayaan Khan Warsi - Web Developer">
+  <meta name="twitter:description" content="Professional web developer offering full-stack development services">
+  <link rel="canonical" href="https://www.ayaankhanwarsi.me/seo-pages/ayaan-khan-warsi.html">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    [data-theme="dark"] {
+      --ink: #08080e;
+      --ink2: #0f0f18;
+      --surface: #13131f;
+      --line: #1c1c2e;
+      --text: #ede8f5;
+      --sub: #7070a0;
+      --warm: #ff6b35;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      background: var(--ink);
+      color: var(--text);
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      line-height: 1.6;
+    }
+    
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      padding: 20px 56px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(8, 8, 14, 0.92);
+      backdrop-filter: blur(24px);
+      border-bottom: 1px solid var(--line);
+    }
+    
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: var(--text);
+    }
+    
+    .logo em {
+      color: var(--warm);
+    }
+    
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      margin-left: 32px;
+      transition: color 0.3s;
+    }
+    
+    .nav-links a:hover {
+      color: var(--warm);
+    }
+    
+    header {
+      margin-top: 80px;
+      padding: 80px 56px;
+      background: linear-gradient(135deg, rgba(19, 19, 31, 0.5), rgba(19, 19, 31, 0.2));
+    }
+    
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+    
+    .subtitle {
+      font-size: 1.2rem;
+      color: var(--sub);
+      max-width: 700px;
+    }
+    
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 80px 56px;
+    }
+    
+    section {
+      margin-bottom: 80px;
+    }
+    
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: var(--text);
+    }
+    
+    h3 {
+      font-size: 1.3rem;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      color: var(--warm);
+    }
+    
+    p {
+      margin-bottom: 15px;
+      color: var(--sub);
+      font-size: 1rem;
+    }
+    
+    .faq {
+      background: linear-gradient(135deg, rgba(19, 19, 31, 0.5), rgba(19, 19, 31, 0.2));
+      padding: 40px;
+      border-radius: 12px;
+      margin: 20px 0;
+    }
+    
+    .faq-question {
+      font-weight: 600;
+      color: var(--text);
+      cursor: pointer;
+      padding: 15px 0;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .faq-answer {
+      display: none;
+      padding: 15px 0;
+      color: var(--sub);
+    }
+    
+    .faq-answer.active {
+      display: block;
+    }
+    
+    .cta {
+      background: linear-gradient(135deg, var(--warm), #ff8a5c);
+      color: #000;
+      padding: 60px 40px;
+      border-radius: 12px;
+      text-align: center;
+      margin: 80px 0;
+    }
+    
+    .cta h2 {
+      color: #000;
+      margin-bottom: 20px;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background: #000;
+      color: var(--warm);
+      padding: 16px 40px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 20px;
+      transition: all 0.3s;
+    }
+    
+    .cta-button:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    }
+    
+    footer {
+      background: var(--ink2);
+      padding: 40px 56px;
+      text-align: center;
+      color: var(--sub);
+      border-top: 1px solid var(--line);
+    }
+    
+    .home-link {
+      color: var(--warm);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    
+    .home-link:hover {
+      text-decoration: underline;
+    }
+    
+    ul {
+      margin-left: 20px;
+      margin-bottom: 15px;
+    }
+    
+    li {
+      margin-bottom: 10px;
+      color: var(--sub);
+    }
+    
+    @media (max-width: 768px) {
+      nav {
+        padding: 14px 24px;
+      }
+      
+      header {
+        padding: 40px 24px;
+        margin-top: 60px;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      h2 {
+        font-size: 1.8rem;
+      }
+      
+      main {
+        padding: 40px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/" class="logo"><em>AYAAN</em> WARSI</a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+    </div>
+  </nav>
+  
+  <header>
+    <h1>Ayaan Khan Warsi</h1>
+    <p class="subtitle">Professional Web Developer and Software Engineer Creating Custom Solutions</p>
+  </header>
+  
+  <main>
+    <section>
+      <h2>About Ayaan Khan Warsi</h2>
+      <p>Ayaan Khan Warsi is a professional web developer and software engineer based in Delhi with years of experience creating custom web solutions for businesses and entrepreneurs. Specializing in full-stack development, e-commerce platforms, and business automation, Ayaan brings technical expertise combined with business understanding to every project. The focus is on delivering production-ready solutions that drive real results for clients across various industries.</p>
+      
+      <p>With a portfolio spanning small business websites to complex web applications, Ayaan Khan Warsi understands the unique challenges businesses face in the digital landscape. Whether you need a professional business website, a custom web application, or automation solutions to streamline operations, comprehensive services are available to help achieve your goals.</p>
+    </section>
+    
+    <section>
+      <h2>Professional Services by Ayaan Khan Warsi</h2>
+      <h3>Full-Stack Web Development</h3>
+      <p>Complete web development services from frontend design to backend infrastructure. Ayaan Khan Warsi builds responsive websites and web applications using modern technologies and best practices. Every project receives attention to performance, security, and user experience.</p>
+      
+      <h3>Custom Web Applications</h3>
+      <p>Purpose-built web applications designed specifically for your business needs. From simple tools to complex platforms handling thousands of transactions, Ayaan Khan Warsi delivers solutions that scale with your business and integrate with existing systems.</p>
+      
+      <h3>E-Commerce Solutions</h3>
+      <p>Build online stores that convert visitors into customers. Ayaan Khan Warsi creates e-commerce platforms with secure payment processing, inventory management, and optimization for search engines to drive sales.</p>
+      
+      <h3>Business Automation</h3>
+      <p>Python automation and workflow optimization to reduce manual work and improve efficiency. Ayaan Khan Warsi helps businesses save time and resources through intelligent automation solutions.</p>
+      
+      <h3>Website Maintenance and Support</h3>
+      <p>Ongoing support ensuring your website stays secure, fast, and updated. Ayaan Khan Warsi provides maintenance services, security updates, performance optimization, and technical support after launch.</p>
+    </section>
+    
+    <section>
+      <h2>Technology Expertise</h2>
+      <p>Ayaan Khan Warsi works with modern web technologies to build robust, scalable solutions. Frontend expertise includes React, Next.js, and responsive design. Backend development covers Node.js, Python, and database design. Full capabilities ensure projects are built with current best practices and future-proof architecture.</p>
+      
+      <ul>
+        <li>Frontend: React, Next.js, JavaScript, HTML5, CSS3</li>
+        <li>Backend: Node.js, Python, Express, PostgreSQL</li>
+        <li>E-Commerce: Shopify, WooCommerce, custom platforms</li>
+        <li>Automation: Python scripting, workflow optimization</li>
+        <li>DevOps: Cloud deployment, CI/CD, server management</li>
+      </ul>
+    </section>
+    
+    <section>
+      <h2>Why Choose Ayaan Khan Warsi</h2>
+      <ul>
+        <li><strong>Technical Excellence:</strong> Modern technologies and best practices ensure quality results</li>
+        <li><strong>Business Focus:</strong> Solutions designed around your business objectives, not just technical features</li>
+        <li><strong>Direct Communication:</strong> Work directly with Ayaan Khan Warsi without intermediaries</li>
+        <li><strong>Proven Results:</strong> Portfolio demonstrates successful projects across industries</li>
+        <li><strong>Ongoing Support:</strong> Available for maintenance and improvements after launch</li>
+        <li><strong>Fast Delivery:</strong> Efficient development process without compromising quality</li>
+        <li><strong>Competitive Pricing:</strong> Professional services at reasonable rates</li>
+      </ul>
+    </section>
+    
+    <section>
+      <h2>Project Approach</h2>
+      <h3>Discovery and Planning</h3>
+      <p>Every project starts with understanding your needs. Ayaan Khan Warsi discusses goals, requirements, timeline, and budget to create a clear project plan ensuring alignment from the start.</p>
+      
+      <h3>Design and Development</h3>
+      <p>Professional design combined with clean, efficient code. Ayaan Khan Warsi builds responsive interfaces that work across all devices while ensuring fast performance and security.</p>
+      
+      <h3>Testing and Deployment</h3>
+      <p>Thorough testing identifies and fixes issues before launch. Deployment is handled professionally ensuring smooth transition and minimal downtime.</p>
+      
+      <h3>Launch and Support</h3>
+      <p>After launch, Ayaan Khan Warsi remains available for support, updates, and optimization. Long-term partnership ensures your digital presence continues delivering results.</p>
+    </section>
+    
+    <section>
+      <h2>Frequently Asked Questions</h2>
+      
+      <div class="faq">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span>How does Ayaan Khan Warsi approach new projects?</span>
+          <span>+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Ayaan Khan Warsi starts every project with a discovery phase to understand your goals, requirements, and constraints. This ensures the solution built exactly matches your needs and vision.</p>
+        </div>
+      </div>
+      
+      <div class="faq">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span>What is the typical project timeline?</span>
+          <span>+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Timelines vary based on project complexity. Simple websites typically take 2-3 days, while complex applications may take weeks. Ayaan Khan Warsi provides accurate timelines after discussing your specific requirements.</p>
+        </div>
+      </div>
+      
+      <div class="faq">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span>Does Ayaan Khan Warsi offer ongoing support?</span>
+          <span>+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Yes, ongoing support is available for all projects. Ayaan Khan Warsi provides maintenance, security updates, performance optimization, and technical support to keep your solution running smoothly.</p>
+        </div>
+      </div>
+      
+      <div class="faq">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span>Can Ayaan Khan Warsi handle complex custom projects?</span>
+          <span>+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Absolutely. Ayaan Khan Warsi specializes in custom solutions for unique business challenges. Whether standard or complex requirements, comprehensive development services are available.</p>
+        </div>
+      </div>
+      
+      <div class="faq">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span>What technologies does Ayaan Khan Warsi use?</span>
+          <span>+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Ayaan Khan Warsi works with modern web technologies including React, Node.js, Python, and cloud platforms. Technology selection depends on your project needs to ensure the best solution.</p>
+        </div>
+      </div>
+    </section>
+    
+    <div class="cta">
+      <h2>Start Your Project With Ayaan Khan Warsi</h2>
+      <p>Ready to build your digital solution? Contact Ayaan Khan Warsi today to discuss your project and vision.</p>
+      <a href="https://www.ayaankhanwarsi.me/" class="cta-button">Get In Touch</a>
+    </div>
+    
+    <section>
+      <p style="text-align: center; margin-top: 40px;"><a href="/" class="home-link">Back to Home</a></p>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2026 Ayaan Khan Warsi. All rights reserved. | <a href="/" class="home-link">Portfolio</a></p>
+  </footer>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Ayaan Khan Warsi",
+    "description": "Professional Web Developer and Software Engineer",
+    "url": "https://www.ayaankhanwarsi.me",
+    "telephone": "+91-XXXXXXXXXX",
+    "email": "contact@ayaankhanwarsi.me",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Delhi",
+      "addressCountry": "IN"
+    },
+    "areaServed": ["Delhi", "NCR"],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "ratingCount": "35"
+    }
+  }
+  </script>
+  
+  <script>
+    function toggleFAQ(e) {
+      const answer = e.nextElementSibling;
+      const icon = e.querySelector("span:last-child");
+      answer.classList.toggle("active");
+      icon.textContent = answer.classList.contains("active") ? "-" : "+";
+    }
+  </script>
+</body>
+</html>
