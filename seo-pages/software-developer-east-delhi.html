@@ -1,0 +1,407 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Software Developer in East Delhi | Ayaan Khan Warsi</title>
+  <meta name="description" content="Professional software developer in East Delhi offering custom software solutions, development services, and technical expertise for businesses in East Delhi.">
+  <meta name="keywords" content="software developer East Delhi, software development East Delhi, developer East Delhi, programming East Delhi">
+  <meta name="author" content="Ayaan Khan Warsi">
+  <meta name="theme-color" content="#ff6b35">
+  <link rel="canonical" href="https://www.ayaankhanwarsi.me/seo-pages/software-developer-east-delhi.html">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    [data-theme="dark"] {
+      --ink: #08080e;
+      --ink2: #0f0f18;
+      --surface: #13131f;
+      --line: #1c1c2e;
+      --text: #ede8f5;
+      --sub: #7070a0;
+      --warm: #ff6b35;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      background: var(--ink);
+      color: var(--text);
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      line-height: 1.6;
+    }
+    
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      padding: 20px 56px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(8, 8, 14, 0.92);
+      backdrop-filter: blur(24px);
+      border-bottom: 1px solid var(--line);
+    }
+    
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: var(--text);
+    }
+    
+    .logo em {
+      color: var(--warm);
+    }
+    
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      margin-left: 32px;
+      transition: color 0.3s;
+    }
+    
+    .nav-links a:hover {
+      color: var(--warm);
+    }
+    
+    header {
+      margin-top: 80px;
+      padding: 80px 56px;
+      background: linear-gradient(135deg, rgba(19, 19, 31, 0.5), rgba(19, 19, 31, 0.2));
+    }
+    
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+    
+    .subtitle {
+      font-size: 1.2rem;
+      color: var(--sub);
+      max-width: 700px;
+    }
+    
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 80px 56px;
+    }
+    
+    section {
+      margin-bottom: 80px;
+    }
+    
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: var(--text);
+    }
+    
+    h3 {
+      font-size: 1.3rem;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      color: var(--warm);
+    }
+    
+    p {
+      margin-bottom: 15px;
+      color: var(--sub);
+      font-size: 1rem;
+    }
+    
+    .faq {
+      background: linear-gradient(135deg, rgba(19, 19, 31, 0.5), rgba(19, 19, 31, 0.2));
+      padding: 40px;
+      border-radius: 12px;
+      margin: 20px 0;
+    }
+    
+    .faq-question {
+      font-weight: 600;
+      color: var(--text);
+      cursor: pointer;
+      padding: 15px 0;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .faq-answer {
+      display: none;
+      padding: 15px 0;
+      color: var(--sub);
+    }
+    
+    .faq-answer.active {
+      display: block;
+    }
+    
+    .cta {
+      background: linear-gradient(135deg, var(--warm), #ff8a5c);
+      color: #000;
+      padding: 60px 40px;
+      border-radius: 12px;
+      text-align: center;
+      margin: 80px 0;
+    }
+    
+    .cta h2 {
+      color: #000;
+      margin-bottom: 20px;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background: #000;
+      color: var(--warm);
+      padding: 16px 40px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 20px;
+      transition: all 0.3s;
+    }
+    
+    .cta-button:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    }
+    
+    footer {
+      background: var(--ink2);
+      padding: 40px 56px;
+      text-align: center;
+      color: var(--sub);
+      border-top: 1px solid var(--line);
+    }
+    
+    .home-link {
+      color: var(--warm);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    
+    .home-link:hover {
+      text-decoration: underline;
+    }
+    
+    ul {
+      margin-left: 20px;
+      margin-bottom: 15px;
+    }
+    
+    li {
+      margin-bottom: 10px;
+      color: var(--sub);
+    }
+    
+    @media (max-width: 768px) {
+      nav {
+        padding: 14px 24px;
+      }
+      
+      header {
+        padding: 40px 24px;
+        margin-top: 60px;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      h2 {
+        font-size: 1.8rem;
+      }
+      
+      main {
+        padding: 40px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/" class="logo"><em>AYAAN</em> WARSI</a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+    </div>
+  </nav>
+  
+  <header>
+    <h1>Software Developer in East Delhi</h1>
+    <p class="subtitle">Professional software development services for East Delhi businesses and organizations</p>
+  </header>
+  
+  <main>
+    <section>
+      <h2>Software Development Services in East Delhi</h2>
+      <p>Ayaan Khan Warsi is a professional software developer based in East Delhi, providing custom software development solutions to local businesses and organizations. With expertise in full-stack development, Python automation, and enterprise solutions, Ayaan understands the unique needs of East Delhi's business community. Whether you're a startup in Mayur Vihar, an organization in Laxmi Nagar, or any business across East Delhi, professional software development services are available.</p>
+      
+      <p>As a software developer in East Delhi, Ayaan combines local market knowledge with global best practices to deliver solutions that scale. From concept to deployment, every project receives careful attention and professional execution. The advantage of working with a local developer is better communication, understanding of local business challenges, and ongoing support.</p>
+    </section>
+    
+    <section>
+      <h2>Services for East Delhi Businesses</h2>
+      <h3>Custom Software Development</h3>
+      <p>Build software specifically designed for your business needs. Whether you need a tool for internal operations or a customer-facing application, custom solutions are created from scratch.</p>
+      
+      <h3>Business Process Automation</h3>
+      <p>Automate your business processes to reduce manual work and improve efficiency. Python automation solutions can handle repetitive tasks and data processing.</p>
+      
+      <h3>Database Solutions</h3>
+      <p>Design and implement efficient database systems for your data management needs. From small databases to enterprise solutions, professional database architecture is provided.</p>
+      
+      <h3>Software Consultation</h3>
+      <p>Get expert advice on technology choices, architecture decisions, and software strategy. Technical consultation helps you make informed decisions about software investments.</p>
+      
+      <h3>Maintenance & Support</h3>
+      <p>Ongoing support and maintenance for your software systems. Keep your applications running smoothly and up-to-date with regular updates and bug fixes.</p>
+    </section>
+    
+    <section>
+      <h2>Why Work with a Local Software Developer in East Delhi?</h2>
+      <ul>
+        <li><strong>Local Presence:</strong> Available in East Delhi for meetings and support</li>
+        <li><strong>Market Understanding:</strong> Knowledge of local business environment and challenges</li>
+        <li><strong>Better Communication:</strong> Direct communication without timezone issues</li>
+        <li><strong>Quick Response:</strong> Fast turnaround on support requests and changes</li>
+        <li><strong>Affordable Services:</strong> Local pricing without offshore markup</li>
+        <li><strong>Long-term Partnership:</strong> Build ongoing relationships for continued support</li>
+        <li><strong>Personal Service:</strong> Direct access to the developer, not through layers of management</li>
+      </ul>
+    </section>
+    
+    <section>
+      <h2>Industries Served in East Delhi</h2>
+      <p>Experience serving businesses across East Delhi including:</p>
+      <ul>
+        <li>Retail and e-commerce businesses</li>
+        <li>Manufacturing and logistics companies</li>
+        <li>Educational institutions and training centers</li>
+        <li>Healthcare clinics and practices</li>
+        <li>Financial services and accounting firms</li>
+        <li>Real estate agencies and property management</li>
+        <li>Service-based businesses and consultancies</li>
+        <li>Startups and new ventures</li>
+      </ul>
+    </section>
+    
+    <section>
+      <h2>Frequently Asked Questions</h2>
+      
+      <div class="faq">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span>Are you available for on-site meetings in East Delhi?</span>
+          <span>+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Yes, being based in East Delhi, on-site meetings are possible for project discussions, requirements gathering, and demonstrations.</p>
+        </div>
+      </div>
+      
+      <div class="faq">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span>What's the pricing for software development in East Delhi?</span>
+          <span>+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Pricing is competitive and based on project scope. Software development costs range from ₹4,000 for small projects to ₹25,000+ for comprehensive solutions.</p>
+        </div>
+      </div>
+      
+      <div class="faq">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span>How quickly can you start a project?</span>
+          <span>+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Projects can typically start immediately. After initial consultation and requirements finalization, development begins right away.</p>
+        </div>
+      </div>
+      
+      <div class="faq">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span>Do you provide support after project completion?</span>
+          <span>+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Yes, post-launch support is available including bug fixes, updates, and new features. Maintenance packages can be tailored to your needs.</p>
+        </div>
+      </div>
+      
+      <div class="faq">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span>Can you work with existing technology?</span>
+          <span>+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Absolutely. If you have existing systems or technology preferences, we can work within those constraints and integrate accordingly.</p>
+        </div>
+      </div>
+    </section>
+    
+    <div class="cta">
+      <h2>Ready to Build Your Software Solution?</h2>
+      <p>Contact me today to discuss your software development needs. As a developer based in East Delhi, I'm ready to help.</p>
+      <a href="https://www.ayaankhanwarsi.me/" class="cta-button">Contact Me</a>
+    </div>
+    
+    <section>
+      <p style="text-align: center; margin-top: 40px;"><a href="/" class="home-link">← Back to Homepage</a></p>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2026 Ayaan Khan Warsi - Software Developer in East Delhi. All rights reserved.</p>
+  </footer>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Ayaan Khan Warsi - Software Developer East Delhi",
+    "url": "https://www.ayaankhanwarsi.me/seo-pages/software-developer-east-delhi.html",
+    "description": "Professional software developer in East Delhi offering custom software solutions and development services",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "East Delhi",
+      "addressRegion": "Delhi",
+      "addressCountry": "IN"
+    },
+    "telephone": "+91-9213786206",
+    "email": "ayaanwarsi816@gmail.com",
+    "priceRange": "₹4,000 - ₹25,000+",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "ratingCount": "15"
+    }
+  }
+  </script>
+  
+  <script>
+    function toggleFAQ(element) {
+      const answer = element.nextElementSibling;
+      answer.classList.toggle('active');
+      const symbol = element.querySelector('span:last-child');
+      symbol.textContent = answer.classList.contains('active') ? '−' : '+';
+    }
+  </script>
+</body>
+</html>

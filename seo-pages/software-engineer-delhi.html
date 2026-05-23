@@ -1,0 +1,406 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experienced Software Engineer in Delhi | Ayaan Khan Warsi</title>
+  <meta name="description" content="Professional software engineer in Delhi with expertise in software architecture, system design, and enterprise solutions. Delivering scalable and maintainable code for businesses.">
+  <meta name="keywords" content="software engineer Delhi, software engineering Delhi, software architect Delhi, system design Delhi, enterprise software Delhi">
+  <meta name="author" content="Ayaan Khan Warsi">
+  <meta name="theme-color" content="#ff6b35">
+  <link rel="canonical" href="https://www.ayaankhanwarsi.me/seo-pages/software-engineer-delhi.html">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    [data-theme="dark"] {
+      --ink: #08080e;
+      --ink2: #0f0f18;
+      --surface: #13131f;
+      --line: #1c1c2e;
+      --text: #ede8f5;
+      --sub: #7070a0;
+      --warm: #ff6b35;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      background: var(--ink);
+      color: var(--text);
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      line-height: 1.6;
+    }
+    
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      padding: 20px 56px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(8, 8, 14, 0.92);
+      backdrop-filter: blur(24px);
+      border-bottom: 1px solid var(--line);
+    }
+    
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: var(--text);
+    }
+    
+    .logo em {
+      color: var(--warm);
+    }
+    
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      margin-left: 32px;
+      transition: color 0.3s;
+    }
+    
+    .nav-links a:hover {
+      color: var(--warm);
+    }
+    
+    header {
+      margin-top: 80px;
+      padding: 80px 56px;
+      background: linear-gradient(135deg, rgba(19, 19, 31, 0.5), rgba(19, 19, 31, 0.2));
+    }
+    
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+    
+    .subtitle {
+      font-size: 1.2rem;
+      color: var(--sub);
+      max-width: 700px;
+    }
+    
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 80px 56px;
+    }
+    
+    section {
+      margin-bottom: 80px;
+    }
+    
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: var(--text);
+    }
+    
+    h3 {
+      font-size: 1.3rem;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      color: var(--warm);
+    }
+    
+    p {
+      margin-bottom: 15px;
+      color: var(--sub);
+      font-size: 1rem;
+    }
+    
+    .faq {
+      background: linear-gradient(135deg, rgba(19, 19, 31, 0.5), rgba(19, 19, 31, 0.2));
+      padding: 40px;
+      border-radius: 12px;
+      margin: 20px 0;
+    }
+    
+    .faq-question {
+      font-weight: 600;
+      color: var(--text);
+      cursor: pointer;
+      padding: 15px 0;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .faq-answer {
+      display: none;
+      padding: 15px 0;
+      color: var(--sub);
+    }
+    
+    .faq-answer.active {
+      display: block;
+    }
+    
+    .cta {
+      background: linear-gradient(135deg, var(--warm), #ff8a5c);
+      color: #000;
+      padding: 60px 40px;
+      border-radius: 12px;
+      text-align: center;
+      margin: 80px 0;
+    }
+    
+    .cta h2 {
+      color: #000;
+      margin-bottom: 20px;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background: #000;
+      color: var(--warm);
+      padding: 16px 40px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 20px;
+      transition: all 0.3s;
+    }
+    
+    .cta-button:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    }
+    
+    footer {
+      background: var(--ink2);
+      padding: 40px 56px;
+      text-align: center;
+      color: var(--sub);
+      border-top: 1px solid var(--line);
+    }
+    
+    .home-link {
+      color: var(--warm);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    
+    .home-link:hover {
+      text-decoration: underline;
+    }
+    
+    ul {
+      margin-left: 20px;
+      margin-bottom: 15px;
+    }
+    
+    li {
+      margin-bottom: 10px;
+      color: var(--sub);
+    }
+    
+    @media (max-width: 768px) {
+      nav {
+        padding: 14px 24px;
+      }
+      
+      header {
+        padding: 40px 24px;
+        margin-top: 60px;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      h2 {
+        font-size: 1.8rem;
+      }
+      
+      main {
+        padding: 40px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/" class="logo"><em>AYAAN</em> WARSI</a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+    </div>
+  </nav>
+  
+  <header>
+    <h1>Software Engineer in Delhi</h1>
+    <p class="subtitle">Building robust, scalable systems with architectural expertise and engineering excellence</p>
+  </header>
+  
+  <main>
+    <section>
+      <h2>Professional Software Engineering in Delhi</h2>
+      <p>Software engineering goes beyond simply writing code—it's about architecting solutions that scale, maintaining quality standards, and building systems that stand the test of time. Ayaan Khan Warsi is a skilled software engineer in Delhi with deep expertise in system design, software architecture, and best engineering practices. Whether you need to build enterprise solutions, refactor legacy systems, or architect complex applications, Ayaan brings engineering rigor to every project.</p>
+      
+      <p>Based in Delhi, Ayaan combines theoretical knowledge with practical experience to deliver software that meets the highest engineering standards. From designing scalable microservices to implementing clean architecture patterns, Ayaan ensures your software is built on solid foundations that support growth and maintainability.</p>
+    </section>
+    
+    <section>
+      <h2>Software Engineering Services</h2>
+      <h3>System Architecture Design</h3>
+      <p>Design robust system architectures that scale with your business. From monolithic applications to microservices, Ayaan creates blueprints for success that handle complexity and growth gracefully.</p>
+      
+      <h3>Software Design Patterns</h3>
+      <p>Implementation of proven design patterns like MVC, MVVM, Repository pattern, and more. These patterns ensure your code is maintainable, testable, and follows industry best practices.</p>
+      
+      <h3>Code Quality & Refactoring</h3>
+      <p>Improve existing codebases through refactoring, optimization, and modernization. Reduce technical debt while maintaining functionality and improving performance.</p>
+      
+      <h3>Testing & Quality Assurance</h3>
+      <p>Implement comprehensive testing strategies including unit tests, integration tests, and end-to-end testing. Ensure reliability and catch issues before they reach production.</p>
+      
+      <h3>Performance Optimization</h3>
+      <p>Analyze and optimize systems for better performance. From database query optimization to algorithmic improvements, ensure your software runs efficiently.</p>
+    </section>
+    
+    <section>
+      <h2>Why Choose Ayaan as Your Software Engineer in Delhi?</h2>
+      <ul>
+        <li><strong>Engineering Excellence:</strong> Strong foundation in computer science principles and software engineering practices</li>
+        <li><strong>Architectural Expertise:</strong> Design systems that scale and evolve with business needs</li>
+        <li><strong>Code Quality Focus:</strong> Commitment to clean, maintainable, and well-tested code</li>
+        <li><strong>Best Practices:</strong> Adherence to SOLID principles, design patterns, and industry standards</li>
+        <li><strong>Problem Solving:</strong> Analytical approach to complex technical challenges</li>
+        <li><strong>Continuous Improvement:</strong> Always learning new technologies and refining skills</li>
+        <li><strong>Collaborative Approach:</strong> Works effectively with teams to achieve shared goals</li>
+      </ul>
+    </section>
+    
+    <section>
+      <h2>Technical Competencies</h2>
+      <h3>Programming Languages</h3>
+      <p>Proficient in Python, JavaScript/Node.js, and other modern languages. Able to choose the right tool for the job and adapt to new technologies quickly.</p>
+      
+      <h3>System Design</h3>
+      <p>Experience with designing scalable systems, databases, APIs, and distributed systems. Understanding of trade-offs between different architectural approaches.</p>
+      
+      <h3>Database Design</h3>
+      <p>Expertise in both SQL and NoSQL databases. Ability to design efficient schemas, optimize queries, and ensure data integrity.</p>
+      
+      <h3>Cloud & DevOps</h3>
+      <p>Experience with AWS, Google Cloud, and containerization technologies like Docker. Understanding of CI/CD pipelines and infrastructure as code.</p>
+    </section>
+    
+    <section>
+      <h2>Frequently Asked Questions</h2>
+      
+      <div class="faq">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span>What's the difference between a software developer and software engineer?</span>
+          <span>+</span>
+        </div>
+        <div class="faq-answer">
+          <p>While developers write code, engineers apply systematic approaches to software development, focusing on architecture, design patterns, scalability, and long-term maintainability.</p>
+        </div>
+      </div>
+      
+      <div class="faq">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span>How do you ensure code quality?</span>
+          <span>+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Through comprehensive testing, code reviews, adherence to design patterns, and following SOLID principles. Automated testing and quality metrics are used to maintain high standards.</p>
+        </div>
+      </div>
+      
+      <div class="faq">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span>Can you help optimize existing systems?</span>
+          <span>+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Absolutely. Performance audits and optimization are part of engineering expertise. Whether improving database queries, refactoring code, or redesigning architecture, we can boost efficiency.</p>
+        </div>
+      </div>
+      
+      <div class="faq">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span>What methodologies do you follow?</span>
+          <span>+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Agile methodologies combined with solid engineering practices. Emphasis on iterative development, continuous integration, and regular feedback loops.</p>
+        </div>
+      </div>
+      
+      <div class="faq">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span>How do you approach new projects?</span>
+          <span>+</span>
+        </div>
+        <div class="faq-answer">
+          <p>With thorough requirements analysis, architectural design, and planning before development begins. This ensures the solution is robust and meets long-term needs.</p>
+        </div>
+      </div>
+    </section>
+    
+    <div class="cta">
+      <h2>Ready to Engineer Your Solution?</h2>
+      <p>Let's discuss your software engineering needs and build something exceptional together.</p>
+      <a href="https://www.ayaankhanwarsi.me/" class="cta-button">Contact Me</a>
+    </div>
+    
+    <section>
+      <p style="text-align: center; margin-top: 40px;"><a href="/" class="home-link">← Back to Homepage</a></p>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2026 Ayaan Khan Warsi - Software Engineer in Delhi. All rights reserved.</p>
+  </footer>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Ayaan Khan Warsi - Software Engineer Delhi",
+    "url": "https://www.ayaankhanwarsi.me/seo-pages/software-engineer-delhi.html",
+    "description": "Professional software engineer in Delhi with expertise in system design, architecture, and enterprise solutions",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Delhi",
+      "addressCountry": "IN"
+    },
+    "telephone": "+91-9213786206",
+    "email": "ayaanwarsi816@gmail.com",
+    "priceRange": "₹4,000 - ₹25,000+",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "ratingCount": "15"
+    }
+  }
+  </script>
+  
+  <script>
+    function toggleFAQ(element) {
+      const answer = element.nextElementSibling;
+      answer.classList.toggle('active');
+      const symbol = element.querySelector('span:last-child');
+      symbol.textContent = answer.classList.contains('active') ? '−' : '+';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,407 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Developer in East Delhi | Ayaan Khan Warsi</title>
+  <meta name="description" content="Professional web developer in East Delhi creating responsive websites and web applications for local businesses and startups.">
+  <meta name="keywords" content="web developer East Delhi, web development East Delhi, website designer East Delhi, web designer East Delhi">
+  <meta name="author" content="Ayaan Khan Warsi">
+  <meta name="theme-color" content="#ff6b35">
+  <link rel="canonical" href="https://www.ayaankhanwarsi.me/seo-pages/web-developer-east-delhi.html">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    [data-theme="dark"] {
+      --ink: #08080e;
+      --ink2: #0f0f18;
+      --surface: #13131f;
+      --line: #1c1c2e;
+      --text: #ede8f5;
+      --sub: #7070a0;
+      --warm: #ff6b35;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      background: var(--ink);
+      color: var(--text);
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      line-height: 1.6;
+    }
+    
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      padding: 20px 56px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(8, 8, 14, 0.92);
+      backdrop-filter: blur(24px);
+      border-bottom: 1px solid var(--line);
+    }
+    
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: var(--text);
+    }
+    
+    .logo em {
+      color: var(--warm);
+    }
+    
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      margin-left: 32px;
+      transition: color 0.3s;
+    }
+    
+    .nav-links a:hover {
+      color: var(--warm);
+    }
+    
+    header {
+      margin-top: 80px;
+      padding: 80px 56px;
+      background: linear-gradient(135deg, rgba(19, 19, 31, 0.5), rgba(19, 19, 31, 0.2));
+    }
+    
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+    
+    .subtitle {
+      font-size: 1.2rem;
+      color: var(--sub);
+      max-width: 700px;
+    }
+    
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 80px 56px;
+    }
+    
+    section {
+      margin-bottom: 80px;
+    }
+    
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: var(--text);
+    }
+    
+    h3 {
+      font-size: 1.3rem;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      color: var(--warm);
+    }
+    
+    p {
+      margin-bottom: 15px;
+      color: var(--sub);
+      font-size: 1rem;
+    }
+    
+    .faq {
+      background: linear-gradient(135deg, rgba(19, 19, 31, 0.5), rgba(19, 19, 31, 0.2));
+      padding: 40px;
+      border-radius: 12px;
+      margin: 20px 0;
+    }
+    
+    .faq-question {
+      font-weight: 600;
+      color: var(--text);
+      cursor: pointer;
+      padding: 15px 0;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .faq-answer {
+      display: none;
+      padding: 15px 0;
+      color: var(--sub);
+    }
+    
+    .faq-answer.active {
+      display: block;
+    }
+    
+    .cta {
+      background: linear-gradient(135deg, var(--warm), #ff8a5c);
+      color: #000;
+      padding: 60px 40px;
+      border-radius: 12px;
+      text-align: center;
+      margin: 80px 0;
+    }
+    
+    .cta h2 {
+      color: #000;
+      margin-bottom: 20px;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background: #000;
+      color: var(--warm);
+      padding: 16px 40px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 20px;
+      transition: all 0.3s;
+    }
+    
+    .cta-button:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    }
+    
+    footer {
+      background: var(--ink2);
+      padding: 40px 56px;
+      text-align: center;
+      color: var(--sub);
+      border-top: 1px solid var(--line);
+    }
+    
+    .home-link {
+      color: var(--warm);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    
+    .home-link:hover {
+      text-decoration: underline;
+    }
+    
+    ul {
+      margin-left: 20px;
+      margin-bottom: 15px;
+    }
+    
+    li {
+      margin-bottom: 10px;
+      color: var(--sub);
+    }
+    
+    @media (max-width: 768px) {
+      nav {
+        padding: 14px 24px;
+      }
+      
+      header {
+        padding: 40px 24px;
+        margin-top: 60px;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      h2 {
+        font-size: 1.8rem;
+      }
+      
+      main {
+        padding: 40px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/" class="logo"><em>AYAAN</em> WARSI</a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+    </div>
+  </nav>
+  
+  <header>
+    <h1>Web Developer in East Delhi</h1>
+    <p class="subtitle">Professional web development services for East Delhi businesses seeking online growth</p>
+  </header>
+  
+  <main>
+    <section>
+      <h2>Web Development Services in East Delhi</h2>
+      <p>Ayaan Khan Warsi is a professional web developer based in East Delhi, delivering custom web solutions to local businesses and entrepreneurs. With expertise in responsive web design, web applications, and online presence creation, Ayaan helps East Delhi businesses establish and grow their digital presence. Whether you're in Laxmi Nagar, Mayur Vihar, Pandav Nagar, or any other part of East Delhi, professional web development services are available to meet your needs.</p>
+      
+      <p>As a web developer in East Delhi, Ayaan brings personal service and local market understanding to every project. Direct communication, quick response times, and ongoing support make it easy to work together. Your web success is the priority, whether building your first website or revamping an existing one.</p>
+    </section>
+    
+    <section>
+      <h2>Web Development Services for East Delhi</h2>
+      <h3>Business Websites</h3>
+      <p>Create professional business websites that establish credibility and attract customers. From design to SEO optimization, complete web presence solutions are provided.</p>
+      
+      <h3>E-Commerce Solutions</h3>
+      <p>Build online stores that drive sales. Integration with payment gateways, inventory management, and customer-friendly checkout experience are included.</p>
+      
+      <h3>Web Application Development</h3>
+      <p>Custom web applications built specifically for your business needs. From simple tools to complex platforms, professional development is delivered.</p>
+      
+      <h3>Website Maintenance</h3>
+      <p>Keep your website secure, fast, and up-to-date. Regular maintenance, security updates, and performance optimization ensure your site runs smoothly.</p>
+      
+      <h3>Responsive Web Design</h3>
+      <p>Websites that work perfectly on all devices. Mobile-responsive design ensures your visitors have great experience regardless of how they access your site.</p>
+    </section>
+    
+    <section>
+      <h2>Why Choose a Web Developer in East Delhi?</h2>
+      <ul>
+        <li><strong>Local Availability:</strong> Based in East Delhi for easy communication and collaboration</li>
+        <li><strong>Quick Turnaround:</strong> Most websites completed within 2-3 days</li>
+        <li><strong>Personal Service:</strong> Direct access to developer without intermediaries</li>
+        <li><strong>Cost Effective:</strong> Local pricing without outsourcing markup</li>
+        <li><strong>Market Understanding:</strong> Knowledge of East Delhi business landscape</li>
+        <li><strong>Long-term Support:</strong> Available for ongoing updates and improvements</li>
+        <li><strong>Quality Focus:</strong> Production-ready websites built with best practices</li>
+      </ul>
+    </section>
+    
+    <section>
+      <h2>Website Services for East Delhi Businesses</h2>
+      <h3>Local Business Directory</h3>
+      <p>Get your business listed and optimized for local search. East Delhi customers can find you easily through local SEO.</p>
+      
+      <h3>Portfolio Websites</h3>
+      <p>Showcase your work with professional portfolio websites. Perfect for freelancers, agencies, and creative professionals in East Delhi.</p>
+      
+      <h3>Blog Development</h3>
+      <p>Create engaging blogs to share content and improve SEO. Content management systems make it easy to publish and manage articles.</p>
+      
+      <h3>Website Redesign</h3>
+      <p>Modernize outdated websites while preserving existing content and authority. Improve design, performance, and user experience.</p>
+    </section>
+    
+    <section>
+      <h2>Frequently Asked Questions</h2>
+      
+      <div class="faq">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span>How much does a website cost in East Delhi?</span>
+          <span>+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Website costs vary based on complexity and features. Simple websites start at ₹4,000 while complex e-commerce solutions cost ₹25,000+. Each project is quoted individually.</p>
+        </div>
+      </div>
+      
+      <div class="faq">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span>Can you meet in person in East Delhi?</span>
+          <span>+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Yes, being based in East Delhi, in-person meetings are possible at cafes, offices, or other locations for project discussions and demonstrations.</p>
+        </div>
+      </div>
+      
+      <div class="faq">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span>Will my website be mobile responsive?</span>
+          <span>+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Absolutely. Every website is built with mobile-first approach, ensuring perfect functionality and appearance on all devices and screen sizes.</p>
+        </div>
+      </div>
+      
+      <div class="faq">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span>How long does website development take?</span>
+          <span>+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Most websites are completed within 2-3 days for standard requirements. More complex projects may take longer, but timelines are discussed upfront.</p>
+        </div>
+      </div>
+      
+      <div class="faq">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span>Do you provide ongoing website support?</span>
+          <span>+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Yes, ongoing support and maintenance is available after launch. Keep your website secure, updated, and optimized with continued support.</p>
+        </div>
+      </div>
+    </section>
+    
+    <div class="cta">
+      <h2>Ready to Build Your Website?</h2>
+      <p>Contact me today to discuss your web development project. As a developer based in East Delhi, I'm here to help.</p>
+      <a href="https://www.ayaankhanwarsi.me/" class="cta-button">Contact Me</a>
+    </div>
+    
+    <section>
+      <p style="text-align: center; margin-top: 40px;"><a href="/" class="home-link">← Back to Homepage</a></p>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2026 Ayaan Khan Warsi - Web Developer in East Delhi. All rights reserved.</p>
+  </footer>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Ayaan Khan Warsi - Web Developer East Delhi",
+    "url": "https://www.ayaankhanwarsi.me/seo-pages/web-developer-east-delhi.html",
+    "description": "Professional web developer in East Delhi creating responsive websites and web applications for local businesses",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "East Delhi",
+      "addressRegion": "Delhi",
+      "addressCountry": "IN"
+    },
+    "telephone": "+91-9213786206",
+    "email": "ayaanwarsi816@gmail.com",
+    "priceRange": "₹4,000 - ₹25,000+",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "ratingCount": "15"
+    }
+  }
+  </script>
+  
+  <script>
+    function toggleFAQ(element) {
+      const answer = element.nextElementSibling;
+      answer.classList.toggle('active');
+      const symbol = element.querySelector('span:last-child');
+      symbol.textContent = answer.classList.contains('active') ? '−' : '+';
+    }
+  </script>
+</body>
+</html>
