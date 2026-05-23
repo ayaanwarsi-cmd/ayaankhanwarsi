@@ -1,0 +1,13 @@
+﻿Humans.txt
+
+  Owner: Ayaan Khan Warsi
+  Website: https://www.ayaankhanwarsi.me
+  GitHub: https://github.com/ayaanwarsi-cmd
+
+  Roles:
+  - Software Developer
+  - Software Engineer
+  - Web Developer
+  - Full Stack Developer
+
+  Location: Delhi, India

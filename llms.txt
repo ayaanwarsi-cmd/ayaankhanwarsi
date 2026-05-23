@@ -1,0 +1,15 @@
+﻿# AI-Readable Description
+
+This is the professional portfolio website of Ayaan Khan Warsi, a full stack developer and software engineer based in Delhi, India.
+
+The website showcases expertise in:
+- Web development (frontend and backend)
+- Full stack development
+- Software development and engineering
+- Python automation and scripting
+
+The site provides information about the developer's skills, projects, and professional background.
+
+Canonical URL: https://www.ayaankhanwarsi.me
+
+Owner: Ayaan Khan Warsi
