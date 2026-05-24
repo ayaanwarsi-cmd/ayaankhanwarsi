@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog | Ayaan Khan Warsi</title>
+
+<!-- ── PRIMARY SEO ── -->
+<meta name="description" content="Read the latest articles on web development, Python automation, software engineering, and digital solutions. Expert insights from Ayaan Khan Warsi.">
+<meta name="keywords" content="blog, web development guide, Python automation, software development, tech articles, digital marketing, web design tips, developer resources">
+<meta name="author" content="Ayaan Khan Warsi">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.ayaankhanwarsi.me/blog/">
+<link rel="manifest" href="/manifest.json">
+
+<!-- ── OPEN GRAPH (WhatsApp, Facebook, LinkedIn previews) ── -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.ayaankhanwarsi.me/blog/">
+<meta property="og:title" content="Developer Blog | Ayaan Khan Warsi">
+<meta property="og:description" content="Read expert articles on web development, Python automation, and digital solutions.">
+<meta property="og:image" content="https://www.ayaankhanwarsi.me/og-image.png">
+<meta property="og:locale" content="en_IN">
+<meta property="og:site_name" content="Ayaan Khan Warsi - Developer Blog">
+
+<!-- ── TWITTER CARD ── -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.ayaankhanwarsi.me/blog/">
+<meta name="twitter:title" content="Developer Blog | Ayaan Khan Warsi">
+<meta name="twitter:description" content="Expert articles on web development, Python automation, and digital solutions.">
+<meta name="twitter:image" content="https://www.ayaankhanwarsi.me/og-image.png">
+
+<!-- ── FAVICON ── -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon.png">
+
+<!-- ── STRUCTURED DATA ── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Developer Blog",
+  "description": "Expert articles on web development, Python automation, software engineering, and digital solutions.",
+  "url": "https://www.ayaankhanwarsi.me/blog/",
+  "image": "https://www.ayaankhanwarsi.me/og-image.png",
+  "creator": {
+    "@type": "Person",
+    "name": "Ayaan Khan Warsi",
+    "url": "https://www.ayaankhanwarsi.me/",
+    "image": "https://www.ayaankhanwarsi.me/og-image.png"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ayaankhanwarsi.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://www.ayaankhanwarsi.me/blog/"
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+
+/* ── THEME VARS ── */
+[data-theme="dark"]{
+  --ink:#08080e;--ink2:#0f0f18;--surface:#13131f;
+  --line:#1c1c2e;--line2:#252538;
+  --text:#ede8f5;--sub:#7070a0;
+  --card-bg:#13131f;--nav-bg:rgba(8,8,14,.92);
+}
+[data-theme="light"]{
+  --ink:#f4f4f8;--ink2:#eaeaf2;--surface:#ffffff;
+  --line:#dddde8;--line2:#cbcbdc;
+  --text:#0d0d1a;--sub:#6060a0;
+  --card-bg:#ffffff;--nav-bg:rgba(244,244,248,.92);
+}
+
+/* ── PREMIUM DESIGN SYSTEM ── */
+:root{
+  --warm:#ff6b35;--glow2:#c850c0;--glow3:#4158d0;--cold:#a8edea;
+  --mono:'Fira Code',monospace;--display:'Bebas Neue',sans-serif;--body:'DM Sans',sans-serif;
+  --spacing-xs:4px;--spacing-sm:8px;--spacing-md:16px;--spacing-lg:24px;--spacing-xl:32px;--spacing-2xl:48px;--spacing-3xl:64px;
+  --radius-sm:6px;--radius-md:12px;--radius-lg:16px;--radius-xl:20px;
+  --shadow-sm:0 1px 2px rgba(0,0,0,.05),0 1px 4px rgba(0,0,0,.08);
+  --shadow-md:0 4px 12px rgba(0,0,0,.12),0 8px 24px rgba(0,0,0,.08);
+  --shadow-lg:0 12px 32px rgba(0,0,0,.15),0 20px 48px rgba(0,0,0,.12);
+  --shadow-xl:0 20px 48px rgba(0,0,0,.2),0 32px 64px rgba(0,0,0,.15);
+}
+
+html{scroll-behavior:smooth;}
+body{background:var(--ink);color:var(--text);font-family:var(--body);overflow-x:hidden;cursor:none;transition:background .4s,color .4s;}
+
+/* ── PAGE TRANSITION ── */
+#page-veil{position:fixed;inset:0;background:var(--warm);z-index:5000;transform:scaleY(1);transform-origin:top;animation:veilOut .7s .1s cubic-bezier(.76,0,.24,1) forwards;}
+@keyframes veilOut{to{transform:scaleY(0);transform-origin:top;}}
+
+/* ── CURSOR ── */
+#cur{width:10px;height:10px;background:var(--warm);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .18s,height .18s;mix-blend-mode:difference;will-change:left,top;}
+#cur2{width:38px;height:38px;border:1.5px solid rgba(255,107,53,.45);border-radius:50%;position:fixed;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .3s,height .3s,border-color .3s;will-change:left,top;}
+#cur.big{width:20px;height:20px;}
+#cur2.big{width:60px;height:60px;border-color:rgba(255,107,53,.75);}
+
+/* ── PROGRESS ── */
+#prog{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--glow3),var(--glow2),var(--warm));z-index:300;width:0%;}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar{width:3px;}
+::-webkit-scrollbar-track{background:var(--ink);}
+::-webkit-scrollbar-thumb{background:var(--warm);}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:20px 56px;display:flex;justify-content:space-between;align-items:center;transition:all .4s;}
+nav.solid{background:var(--nav-bg);backdrop-filter:blur(24px);padding:14px 56px;border-bottom:1px solid var(--line);}
+.logo{font-family:var(--display);font-size:1.5rem;letter-spacing:.05em;text-decoration:none;color:var(--text);display:flex;align-items:center;justify-content:center;gap:0;transition:all .3s cubic-bezier(.23,1,.32,1);height:56px;padding:0 4px;border-radius:var(--radius-sm);position:relative;flex-shrink:0;}
+.logo:hover{background:rgba(255,107,53,.04);}
+.logo img{height:44px;width:auto;object-fit:contain;object-position:center;filter:brightness(1) contrast(1);transition:all .35s cubic-bezier(.23,1,.32,1);}
+.logo:hover img{filter:brightness(1.1) contrast(1.05) drop-shadow(0 0 6px rgba(255,107,53,.15));}
+nav.solid .logo{height:48px;padding:0 2px;}
+nav.solid .logo img{height:36px;}
+@media(max-width:1024px){
+  nav{padding:18px 44px;}
+  nav.solid{padding:13px 44px;}
+  .logo{height:52px;}
+  .logo img{height:40px;}
+  nav.solid .logo img{height:34px;}
+}
+@media(max-width:960px){
+  nav{padding:16px 32px;}
+  nav.solid{padding:12px 32px;}
+  .logo{height:48px;}
+  .logo img{height:36px;}
+  nav.solid .logo{height:44px;}
+  nav.solid .logo img{height:30px;}
+}
+@media(max-width:768px){
+  nav{padding:14px 24px;}
+  nav.solid{padding:10px 24px;}
+  .logo{height:44px;}
+  .logo img{height:32px;}
+  nav.solid .logo img{height:28px;}
+}
+@media(max-width:540px){
+  nav{padding:12px 16px;}
+  nav.solid{padding:9px 16px;}
+  .logo{height:40px;gap:0;}
+  .logo img{height:28px;}
+  nav.solid .logo{height:36px;}
+  nav.solid .logo img{height:24px;}
+}
+
+.nav-r{display:flex;align-items:center;gap:32px;}
+.nav-links{display:flex;align-items:center;gap:32px;}
+.nav-links a{font-family:var(--mono);font-size:.68rem;color:var(--sub);text-decoration:none;letter-spacing:.08em;transition:color .2s;}
+.nav-links a:hover{color:var(--text);}
+
+/* theme toggle */
+.theme-btn{width:38px;height:22px;border-radius:11px;border:1px solid var(--line2);background:var(--surface);cursor:none;position:relative;transition:all .3s;flex-shrink:0;}
+.theme-knob{width:14px;height:14px;border-radius:50%;background:var(--warm);position:absolute;top:3px;left:3px;transition:transform .3s;}
+[data-theme="light"] .theme-knob{transform:translateX(16px);}
+.theme-icon{font-size:.75rem;position:absolute;top:50%;transform:translateY(-50%);transition:opacity .3s;}
+.theme-icon.sun{right:5px;opacity:1;}
+.theme-icon.moon{left:5px;opacity:1;}
+[data-theme="light"] .theme-icon.sun{opacity:0;}
+[data-theme="dark"] .theme-icon.moon{opacity:0;}
+
+.nav-hire{padding:9px 22px;border:1px solid var(--warm);color:var(--warm)!important;font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-decoration:none;transition:all .25s;background:transparent;}
+.nav-hire:hover{background:var(--warm);color:#000!important;}
+
+/* hamburger */
+.ham{display:none;flex-direction:column;gap:5px;cursor:none;padding:4px;z-index:210;}
+.ham span{display:block;width:24px;height:1.5px;background:var(--text);transition:all .35s cubic-bezier(.23,1,.32,1);}
+.ham.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.ham.open span:nth-child(2){opacity:0;transform:translateX(-8px);}
+.ham.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+
+/* mobile menu */
+.mob-menu{position:fixed;inset:0;background:var(--ink2);z-index:190;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:36px;transform:translateX(100%);transition:transform .5s cubic-bezier(.23,1,.32,1);}
+.mob-menu.open{transform:translateX(0);}
+.mob-menu a{font-family:var(--display);font-size:3.5rem;color:var(--text);text-decoration:none;letter-spacing:.05em;transition:color .2s;}
+.mob-menu a:hover{color:var(--warm);}
+.mob-menu .nav-hire{font-family:var(--display);font-size:2rem;padding:14px 40px;margin-top:12px;}
+
+/* ── HERO ── */
+#hero{min-height:90vh;position:relative;display:flex;align-items:center;overflow:hidden;padding-top:80px;}
+canvas#stars{position:absolute;inset:0;z-index:1;}
+.orb-wrap{position:absolute;inset:0;pointer-events:none;z-index:2;}
+.orb{position:absolute;border-radius:50%;filter:blur(90px);animation:drift 16s ease-in-out infinite;}
+.o1{width:650px;height:650px;background:radial-gradient(circle,#4158d0 0%,transparent 70%);top:-15%;left:-12%;opacity:.45;}
+.o2{width:480px;height:480px;background:radial-gradient(circle,#c850c0 0%,transparent 70%);top:25%;right:-8%;opacity:.4;animation-delay:-6s;}
+.o3{width:380px;height:380px;background:radial-gradient(circle,#ff6b35 0%,transparent 70%);bottom:-5%;left:28%;opacity:.35;animation-delay:-11s;}
+@keyframes drift{0%,100%{transform:translate(0,0) scale(1);}33%{transform:translate(35px,-28px) scale(1.06);}66%{transform:translate(-22px,38px) scale(.95);}}
+.grain-layer{position:absolute;inset:0;z-index:3;pointer-events:none;opacity:.4;}
+.grain-layer::after{content:'';position:absolute;inset:-200%;width:400%;height:400%;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='250' height='250' filter='url(%23n)' opacity='.1'/%3E%3C/svg%3E");animation:gr 1.5s steps(1) infinite;}
+@keyframes gr{0%{transform:translate(0,0);}20%{transform:translate(-4%,-4%);}40%{transform:translate(4%,-8%);}60%{transform:translate(-8%,4%);}80%{transform:translate(4%,8%);}100%{transform:translate(-4%,4%);}}
+.vignette{position:absolute;inset:0;z-index:4;background:radial-gradient(ellipse 110% 90% at 50% 0%,transparent 50%,var(--ink) 100%);}
+.hero-inner{position:relative;z-index:10;padding:0 56px;width:100%;}
+
+.h-eyebrow{font-family:var(--mono);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--warm);margin-bottom:28px;display:flex;align-items:center;gap:14px;opacity:0;animation:fadeUp .7s .1s forwards;}
+.ey-dot{width:5px;height:5px;border-radius:50%;background:var(--warm);animation:pulse 2s infinite;}
+.ey-line{height:1px;width:36px;background:var(--warm);}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.3;transform:scale(1.7);}}
+
+h1.blog-title{font-family:var(--display);font-size:clamp(3rem,8vw,8rem);line-height:.9;letter-spacing:.02em;margin-bottom:20px;opacity:0;animation:fadeUp .8s .15s forwards;}
+
+.blog-intro{font-size:.95rem;line-height:1.88;color:var(--sub);max-width:700px;margin-bottom:46px;opacity:0;animation:fadeUp .7s .3s forwards;}
+.blog-intro strong{color:var(--text);font-weight:500;}
+
+.blog-breadcrumb{font-family:var(--mono);font-size:.65rem;color:var(--sub);margin-bottom:32px;opacity:0;animation:fadeUp .7s .25s forwards;display:flex;align-items:center;gap:8px;}
+.blog-breadcrumb a{color:var(--warm);text-decoration:none;transition:color .2s;}
+.blog-breadcrumb a:hover{color:var(--text);}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(26px);}to{opacity:1;transform:translateY(0);}}
+
+/* ── SECTIONS ── */
+section{padding:120px 56px;position:relative;}
+.s-tag{font-family:var(--mono);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--warm);margin-bottom:24px;display:flex;align-items:center;gap:12px;font-weight:500;}
+.s-tag::before{content:'';width:2px;height:14px;background:linear-gradient(180deg,var(--warm),transparent);border-radius:1px;}
+.s-ttl{font-family:var(--display);font-size:clamp(2.5rem,5vw,5rem);letter-spacing:.03em;line-height:.9;margin-bottom:80px;font-weight:700;word-spacing:9999px;}
+.s-ttl em{color:transparent;-webkit-text-stroke:1.5px var(--warm);font-style:normal;}
+.rv{opacity:0;transform:translateY(40px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1);}
+.rv.on{opacity:1;transform:none;}
+
+/* ── BLOG GRID ── */
+.blog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-bottom:80px;}
+.blog-card{background:linear-gradient(135deg,rgba(19,19,31,.6),rgba(19,19,31,.2));border:1px solid rgba(255,107,53,.06);padding:40px 36px;position:relative;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column;transform-style:preserve-3d;transition:all .4s cubic-bezier(.23,1,.32,1);border-radius:var(--radius-lg);will-change:transform;backdrop-filter:blur(20px);box-shadow:var(--shadow-sm),inset 0 1px 0 rgba(255,255,255,.06);}
+.blog-card::before{content:'';position:absolute;top:0;right:0;left:0;height:1px;background:linear-gradient(90deg,transparent,var(--warm),transparent);opacity:.4;transform:scaleX(0);transition:all .5s;}
+.blog-card:hover::before{transform:scaleX(1);opacity:.8;}
+.blog-card:hover{border-color:rgba(255,107,53,.16);box-shadow:var(--shadow-lg),inset 0 1px 0 rgba(255,255,255,.06),0 0 24px rgba(255,107,53,.12);transform:translateY(-8px);}
+.blog-num{font-family:var(--mono);font-size:.62rem;color:var(--warm);letter-spacing:.1em;margin-bottom:16px;font-weight:500;}
+.blog-name{font-family:var(--display);font-size:1.85rem;letter-spacing:.01em;margin-bottom:14px;line-height:1.1;transition:color .3s;font-weight:600;color:var(--text);}
+.blog-card:hover .blog-name{color:var(--warm);}
+.blog-desc{font-size:.85rem;line-height:1.85;color:var(--sub);margin-bottom:auto;margin-top:8px;font-weight:400;flex-grow:1;}
+.blog-foot{display:flex;justify-content:space-between;align-items:center;margin-top:28px;padding-top:24px;border-top:1px solid rgba(255,107,53,.08);}
+.blog-cats{display:flex;gap:8px;flex-wrap:wrap;}
+.blog-pill{font-family:var(--mono);font-size:.6rem;padding:6px 12px;border:1px solid rgba(255,107,53,.12);color:var(--sub);border-radius:var(--radius-sm);transition:all .2s;background:rgba(255,107,53,.04);}
+.blog-card:hover .blog-pill{border-color:rgba(255,107,53,.2);color:var(--warm);background:rgba(255,107,53,.08);}
+.blog-link{font-family:var(--mono);font-size:.68rem;color:var(--warm);display:flex;align-items:center;gap:6px;transition:all .3s;font-weight:600;}
+.blog-card:hover .blog-link{gap:10px;}
+.blog-link svg{transition:transform .3s cubic-bezier(.23,1,.32,1);}
+.blog-card:hover .blog-link svg{transform:translate(4px,-4px);}
+
+/* ── CTA SECTION ── */
+.cta-section{background:var(--ink2);padding:80px 56px;text-align:center;position:relative;overflow:hidden;border-radius:var(--radius-lg);border:1px solid rgba(255,107,53,.1);}
+.ctorb{position:absolute;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(200,80,192,.06),transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;z-index:1;}
+.cta-inner{position:relative;z-index:10;max-width:720px;margin:0 auto;}
+.cta-title{font-family:var(--display);font-size:clamp(2rem,5vw,4rem);letter-spacing:.02em;line-height:.95;margin-bottom:20px;}
+.cta-title em{color:var(--warm);font-style:normal;}
+.cta-desc{font-size:.9rem;line-height:1.85;color:var(--sub);margin-bottom:40px;}
+.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+.btn-p{padding:16px 40px;background:linear-gradient(135deg,var(--warm),#ff8a5c);color:#000;font-family:var(--mono);font-size:.73rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;position:relative;overflow:hidden;transition:all .3s cubic-bezier(.23,1,.32,1);border-radius:var(--radius-md);border:none;cursor:pointer;box-shadow:var(--shadow-md),0 0 20px rgba(255,107,53,.15);}
+.btn-p::after{content:'';position:absolute;top:50%;left:50%;width:0;height:0;background:rgba(255,255,255,.25);border-radius:50%;transform:translate(-50%,-50%);transition:width .5s,height .5s;}
+.btn-p:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg),0 0 30px rgba(255,107,53,.25);}
+.btn-p:hover::after{width:380px;height:380px;}
+.btn-s{padding:16px 40px;background:transparent;color:var(--text);font-family:var(--mono);font-size:.73rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border:1.5px solid var(--line);transition:all .3s cubic-bezier(.23,1,.32,1);border-radius:var(--radius-md);cursor:pointer;}
+.btn-s:hover{border-color:var(--warm);color:var(--warm);background:rgba(255,107,53,.05);box-shadow:0 0 20px rgba(255,107,53,.1);}
+
+/* ── FOOTER ── */
+footer{padding:32px 56px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;background:var(--ink2);gap:32px;}
+footer .ft{display:flex;align-items:center;gap:12px;align-self:center;}
+footer .ft-logo{height:28px;width:auto;object-fit:contain;object-position:center;filter:brightness(.85) contrast(.95);transition:all .35s cubic-bezier(.23,1,.32,1);flex-shrink:0;}
+footer .ft-logo:hover{filter:brightness(1.05) contrast(1) drop-shadow(0 0 4px rgba(255,107,53,.12));}
+footer .ft:first-child .ft-logo{margin-right:4px;}
+footer .ft:first-child{flex:0 1 auto;}
+footer .ft:last-child{flex:0 1 auto;margin-left:auto;}
+.ft{font-family:var(--mono);font-size:.6rem;color:var(--sub);}
+.ft strong{color:var(--warm);font-weight:600;}
+
+/* ── MOBILE ── */
+@media(max-width:960px){
+  nav .nav-links{display:none;}
+  nav .ham{display:flex;}
+  #hero{padding-top:60px;}
+  .hero-inner{padding:0 24px;}
+  section{padding:80px 24px;}
+  .blog-grid{grid-template-columns:1fr;gap:20px;}
+  .cta-section{padding:60px 24px;}
+  footer{flex-direction:column;gap:10px;text-align:center;padding:22px;}
+  footer .ft{justify-content:center;}
+  footer .ft-logo{height:28px;}
+}
+@media(max-width:540px){
+  nav{padding:12px 16px;}
+  nav.solid{padding:9px 16px;}
+  .logo{height:40px;}
+  .logo img{height:28px;}
+  nav.solid .logo{height:36px;}
+  nav.solid .logo img{height:24px;}
+  
+  section{padding:60px 16px;}
+  .blog-grid{grid-template-columns:1fr;}
+  .blog-card{padding:28px 20px;}
+  .cta-section{padding:48px 20px;border-radius:var(--radius-md);}
+  .cta-btns{flex-direction:column;}
+  .btn-p,.btn-s{width:100%;}
+  footer{flex-direction:column;gap:12px;text-align:center;padding:20px 16px;}
+  footer .ft{width:100%;justify-content:center;}
+  footer .ft:last-child{margin-left:0;}
+  footer .ft-logo{height:22px;}
+}
+
+/* Light theme */
+[data-theme="light"] .blog-card{
+  box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+</style>
+</head>
+<body>
+
+<!-- PAGE TRANSITION VEIL -->
+<div id="page-veil"></div>
+
+<!-- CURSOR -->
+<div id="cur"></div>
+<div id="cur2"></div>
+<div id="prog"></div>
+
+<!-- MOBILE MENU -->
+<div class="mob-menu" id="mob-menu">
+  <a href="/" class="mob-link">Home</a>
+  <a href="/#about" class="mob-link">About</a>
+  <a href="/#services" class="mob-link">Services</a>
+  <a href="/" class="mob-link">Work</a>
+  <a href="/blog/" class="mob-link">Blog</a>
+  <a href="/#contact" class="nav-hire mob-link">Hire Me</a>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="/" class="logo"><img src="/assets/branding/logo-main-transparent.png" alt="Ayaan Khan Warsi - Web Developer" /></a>
+  <div class="nav-r">
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/#about">About</a>
+      <a href="/#services">Services</a>
+      <a href="/#projects">Work</a>
+      <a href="/blog/">Blog</a>
+    </div>
+    <button class="theme-btn" id="theme-btn" aria-label="Toggle theme">
+      <div class="theme-knob"></div>
+      <span class="theme-icon moon">🌙</span>
+      <span class="theme-icon sun">☀️</span>
+    </button>
+    <a href="/#contact" class="nav-hire">Hire Me</a>
+    <div class="ham" id="ham">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <canvas id="stars"></canvas>
+  <div class="orb-wrap">
+    <div class="orb o1"></div>
+    <div class="orb o2"></div>
+    <div class="orb o3"></div>
+  </div>
+  <div class="grain-layer"></div>
+  <div class="vignette"></div>
+
+  <div class="hero-inner">
+    <div class="blog-breadcrumb rv">
+      <a href="/">Home</a>
+      <span>/</span>
+      <span>Blog</span>
+    </div>
+    <h1 class="blog-title">Developer Blog</h1>
+    <p class="blog-intro">
+      <strong>Expert articles and guides on web development, Python automation, software engineering, and digital solutions.</strong> Learn best practices, explore real-world examples, and discover strategies to build better products and grow your business online.
+    </p>
+  </div>
+</section>
+
+<!-- BLOG GRID -->
+<section style="background:var(--ink);">
+  <div class="s-tag">Resources</div>
+  <h2 class="s-ttl rv">Latest <em>Articles</em></h2>
+
+  <div class="blog-grid">
+    <a href="/blog/software-development-delhi.html" class="blog-card rv">
+      <div class="blog-num">Article — 01</div>
+      <div class="blog-name">Software Development in Delhi</div>
+      <div class="blog-desc">Complete guide to software development services available in Delhi. Learn about best practices, modern technologies, and how to choose the right developer for your project.</div>
+      <div class="blog-foot">
+        <div class="blog-cats"><span class="blog-pill">Development</span><span class="blog-pill">Guide</span></div>
+        <div class="blog-link">Read More <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M1.5 11.5L11.5 1.5M11.5 1.5H4.5M11.5 1.5V8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      </div>
+    </a>
+
+    <a href="/blog/web-development-guide-delhi.html" class="blog-card rv">
+      <div class="blog-num">Article — 02</div>
+      <div class="blog-name">Web Development Guide for Delhi Businesses</div>
+      <div class="blog-desc">Essential guide to web development for local businesses. Cover everything from planning to launch, including design, functionality, SEO, and maintenance strategies.</div>
+      <div class="blog-foot">
+        <div class="blog-cats"><span class="blog-pill">Web Dev</span><span class="blog-pill">SEO</span></div>
+        <div class="blog-link">Read More <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M1.5 11.5L11.5 1.5M11.5 1.5H4.5M11.5 1.5V8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      </div>
+    </a>
+
+    <a href="/blog/python-automation-for-business.html" class="blog-card rv">
+      <div class="blog-num">Article — 03</div>
+      <div class="blog-name">Python Automation for Business</div>
+      <div class="blog-desc">Discover how Python automation can transform your business. Learn about real-world applications, ROI calculations, implementation strategies, and common use cases.</div>
+      <div class="blog-foot">
+        <div class="blog-cats"><span class="blog-pill">Python</span><span class="blog-pill">Automation</span></div>
+        <div class="blog-link">Read More <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M1.5 11.5L11.5 1.5M11.5 1.5H4.5M11.5 1.5V8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      </div>
+    </a>
+
+    <a href="/blog/python-automation-examples.html" class="blog-card rv">
+      <div class="blog-num">Article — 04</div>
+      <div class="blog-name">Real-World Python Automation Examples</div>
+      <div class="blog-desc">Practical examples of Python automation in action. Explore case studies, code samples, and step-by-step walkthroughs of common automation scenarios.</div>
+      <div class="blog-foot">
+        <div class="blog-cats"><span class="blog-pill">Python</span><span class="blog-pill">Code</span></div>
+        <div class="blog-link">Read More <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M1.5 11.5L11.5 1.5M11.5 1.5H4.5M11.5 1.5V8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      </div>
+    </a>
+
+    <a href="/blog/hire-software-developer-delhi-guide.html" class="blog-card rv">
+      <div class="blog-num">Article — 05</div>
+      <div class="blog-name">How to Hire the Right Software Developer in Delhi</div>
+      <div class="blog-desc">Complete hiring guide for finding and evaluating software developers. Learn about interview questions, evaluation criteria, red flags, and how to assess technical skills.</div>
+      <div class="blog-foot">
+        <div class="blog-cats"><span class="blog-pill">Hiring</span><span class="blog-pill">Guide</span></div>
+        <div class="blog-link">Read More <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M1.5 11.5L11.5 1.5M11.5 1.5H4.5M11.5 1.5V8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      </div>
+    </a>
+
+    <a href="/blog/react-vs-nextjs-guide.html" class="blog-card rv">
+      <div class="blog-num">Article — 06</div>
+      <div class="blog-name">React vs Next.js: Choosing the Right Framework</div>
+      <div class="blog-desc">In-depth comparison of React and Next.js. Understand when to use each framework, performance differences, rendering strategies, and best practices for your project.</div>
+      <div class="blog-foot">
+        <div class="blog-cats"><span class="blog-pill">React</span><span class="blog-pill">Frameworks</span></div>
+        <div class="blog-link">Read More <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M1.5 11.5L11.5 1.5M11.5 1.5H4.5M11.5 1.5V8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      </div>
+    </a>
+
+    <a href="/blog/small-business-website-guide.html" class="blog-card rv">
+      <div class="blog-num">Article — 07</div>
+      <div class="blog-name">Small Business Website Guide</div>
+      <div class="blog-desc">Essential guide for small businesses building their first website. Learn about features you need, design best practices, SEO, mobile responsiveness, and conversion optimization.</div>
+      <div class="blog-foot">
+        <div class="blog-cats"><span class="blog-pill">Small Business</span><span class="blog-pill">Growth</span></div>
+        <div class="blog-link">Read More <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M1.5 11.5L11.5 1.5M11.5 1.5H4.5M11.5 1.5V8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      </div>
+    </a>
+
+    <a href="/blog/website-development-cost-delhi.html" class="blog-card rv">
+      <div class="blog-num">Article — 08</div>
+      <div class="blog-name">Website Development Cost in Delhi</div>
+      <div class="blog-desc">Complete breakdown of website development costs. Understand pricing factors, different project types, hidden costs to watch for, and how to get the best value for your investment.</div>
+      <div class="blog-foot">
+        <div class="blog-cats"><span class="blog-pill">Pricing</span><span class="blog-pill">Budget</span></div>
+        <div class="blog-link">Read More <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M1.5 11.5L11.5 1.5M11.5 1.5H4.5M11.5 1.5V8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section style="background:var(--ink);padding:100px 56px;">
+  <div class="cta-section rv">
+    <h2 class="cta-title">Ready to Build Your Next <em>Project?</em></h2>
+    <p class="cta-desc">
+      Got a web development, automation, or consulting need? Let's discuss your project, timeline, and goals. I'm actively taking on new clients and can start immediately.
+    </p>
+    <div class="cta-btns">
+      <a href="/#contact" class="btn-p">Get Started Now</a>
+      <a href="/" class="btn-s">Back to Home</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft"><img src="/assets/branding/logo-main-transparent.png" alt="AKW Brand" class="ft-logo" />&copy; 2025 <strong>Ayaan Khan Warsi</strong></div>
+  <div class="ft">Delhi, India &nbsp;&#x2665;&nbsp; Made with passion.</div>
+</footer>
+
+<!-- EmailJS SDK (Optional for contact form interactions) -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+(function(){
+
+// ── CURSOR ──
+var cur=document.getElementById('cur'), cur2=document.getElementById('cur2');
+var mx=window.innerWidth/2, my=window.innerHeight/2, cx=mx, cy=my;
+document.addEventListener('mousemove',function(e){
+  mx=e.clientX; my=e.clientY;
+  cur.style.left=mx+'px'; cur.style.top=my+'px';
+});
+(function loop(){
+  cx+=(mx-cx)*.13; cy+=(my-cy)*.13;
+  cur2.style.left=cx+'px'; cur2.style.top=cy+'px';
+  requestAnimationFrame(loop);
+})();
+document.querySelectorAll('a,button,.blog-card').forEach(function(el){
+  el.addEventListener('mouseenter',function(){cur.classList.add('big');cur2.classList.add('big');});
+  el.addEventListener('mouseleave',function(){cur.classList.remove('big');cur2.classList.remove('big');});
+});
+
+// ── PROGRESS + NAV ──
+var pBar=document.getElementById('prog'), navEl=document.getElementById('nav');
+window.addEventListener('scroll',function(){
+  pBar.style.width=(window.scrollY/(document.body.scrollHeight-window.innerHeight)*100)+'%';
+  navEl.classList.toggle('solid',window.scrollY>60);
+});
+
+// ── REVEAL ──
+var rvEls=document.querySelectorAll('.rv');
+new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){
+      var i=Array.prototype.indexOf.call(rvEls,e.target);
+      setTimeout(function(){e.target.classList.add('on');},(i%5)*80);
+    }
+  });
+},{threshold:.1}).observe
+? (function(){
+    var io2=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          var i=Array.prototype.indexOf.call(rvEls,e.target);
+          setTimeout(function(){e.target.classList.add('on');},(i%5)*80);
+        }
+      });
+    },{threshold:.1});
+    rvEls.forEach(function(el){io2.observe(el);});
+  })()
+: null;
+
+// ── DARK / LIGHT TOGGLE ──
+var html=document.documentElement;
+var themeBtn=document.getElementById('theme-btn');
+themeBtn.addEventListener('click',function(){
+  html.setAttribute('data-theme',html.getAttribute('data-theme')==='dark'?'light':'dark');
+  localStorage.setItem('theme',html.getAttribute('data-theme'));
+});
+var saved=localStorage.getItem('theme');
+if(saved) html.setAttribute('data-theme',saved);
+
+// ── HAMBURGER MENU ──
+var ham=document.getElementById('ham'), mobMenu=document.getElementById('mob-menu');
+function closeMenu(){ham.classList.remove('open');mobMenu.classList.remove('open');document.body.style.overflow='';}
+ham.addEventListener('click',function(){
+  ham.classList.toggle('open');
+  mobMenu.classList.toggle('open');
+  document.body.style.overflow=mobMenu.classList.contains('open')?'hidden':'';
+});
+document.querySelectorAll('.mob-link').forEach(function(a){a.addEventListener('click',closeMenu);});
+
+// ── PARTICLE STARS ──
+var canvas=document.getElementById('stars');
+var ctx=canvas.getContext('2d');
+var stars=[];
+function resizeCanvas(){canvas.width=window.innerWidth;canvas.height=window.innerHeight;}
+resizeCanvas();
+window.addEventListener('resize',resizeCanvas);
+for(var i=0;i<160;i++){
+  stars.push({
+    x:Math.random()*canvas.width, y:Math.random()*canvas.height,
+    r:Math.random()*1.4+.2, speed:Math.random()*.3+.05,
+    opacity:Math.random()*.7+.2, twinkleSpeed:Math.random()*.02+.005, twinkleDir:1
+  });
+}
+function drawStars(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  stars.forEach(function(s){
+    s.opacity+=s.twinkleSpeed*s.twinkleDir;
+    if(s.opacity>=.9||s.opacity<=.1) s.twinkleDir*=-1;
+    s.y-=s.speed;
+    if(s.y<0){s.y=canvas.height;s.x=Math.random()*canvas.width;}
+    ctx.beginPath();
+    ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
+    ctx.fillStyle='rgba(255,255,255,'+s.opacity+')';
+    ctx.fill();
+  });
+  requestAnimationFrame(drawStars);
+}
+drawStars();
+
+// ── 3D TILT on blog cards ──
+document.querySelectorAll('.blog-card').forEach(function(card){
+  card.addEventListener('mousemove',function(e){
+    var r=card.getBoundingClientRect();
+    var x=(e.clientX-r.left)/r.width-.5;
+    var y=(e.clientY-r.top)/r.height-.5;
+    card.style.transform='perspective(800px) rotateY('+x*14+'deg) rotateX('+(-y*10)+'deg) translateZ(10px)';
+    card.style.transition='transform .05s';
+  });
+  card.addEventListener('mouseleave',function(){
+    card.style.transform='perspective(800px) rotateY(0) rotateX(0) translateZ(0)';
+    card.style.transition='transform .5s cubic-bezier(.23,1,.32,1)';
+  });
+});
+
+// ── MAGNETIC BUTTONS ──
+document.querySelectorAll('.btn-p,.btn-s,.nav-hire').forEach(function(btn){
+  btn.addEventListener('mousemove',function(e){
+    var r=btn.getBoundingClientRect();
+    btn.style.transform='translate('+((e.clientX-r.left-r.width/2)*.22)+'px,'+((e.clientY-r.top-r.height/2)*.22)+'px)';
+  });
+  btn.addEventListener('mouseleave',function(){btn.style.transform='translate(0,0)';});
+});
+
+// ── ORB PARALLAX ──
+var o1=document.querySelector('.o1'),o2=document.querySelector('.o2');
+document.addEventListener('mousemove',function(e){
+  var nx=(e.clientX/window.innerWidth-.5)*36,ny=(e.clientY/window.innerHeight-.5)*36;
+  if(o1)o1.style.transform='translate('+nx+'px,'+ny+'px)';
+  if(o2)o2.style.transform='translate('+(-nx*.6)+'px,'+(-ny*.6)+'px)';
+});
+
+// ── SMOOTH ANCHOR NAVIGATION ──
+document.querySelectorAll('a[href^="#"]').forEach(function(link){
+  link.addEventListener('click',function(e){
+    var href=this.getAttribute('href');
+    var target=document.querySelector(href);
+    if(target){
+      e.preventDefault();
+      target.scrollIntoView({behavior:'smooth',block:'start'});
+      history.pushState(null,null,href);
+    }
+  },{passive:false});
+});
+
+})();
+</script>
+</body>
+</html>
