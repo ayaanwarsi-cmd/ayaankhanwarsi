@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | Ayaan Khan Warsi</title>
+
+<!-- ── PRIMARY SEO ── -->
+<meta name="description" content="Explore featured portfolio projects by Ayaan Khan Warsi. Web development, Python automation, custom dashboards, and lead generation systems delivered for startups and businesses.">
+<meta name="keywords" content="portfolio projects, web development examples, Python automation projects, business dashboard, lead generation system, custom web applications">
+<meta name="author" content="Ayaan Khan Warsi">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#ff6b35">
+<link rel="canonical" href="https://www.ayaankhanwarsi.me/portfolio/">
+<link rel="manifest" href="/manifest.json">
+
+<!-- ── OPEN GRAPH ── -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.ayaankhanwarsi.me/portfolio/">
+<meta property="og:title" content="Portfolio | Ayaan Khan Warsi - Web Developer & Automation Expert">
+<meta property="og:description" content="View featured portfolio projects including web development, Python automation, dashboards, and lead generation systems.">
+<meta property="og:image" content="https://www.ayaankhanwarsi.me/og-image.png">
+<meta property="og:locale" content="en_IN">
+<meta property="og:site_name" content="Ayaan Khan Warsi - Freelance Web Developer">
+
+<!-- ── TWITTER CARD ── -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.ayaankhanwarsi.me/portfolio/">
+<meta name="twitter:title" content="Portfolio | Ayaan Khan Warsi">
+<meta name="twitter:description" content="Featured portfolio projects and case studies.">
+<meta name="twitter:image" content="https://www.ayaankhanwarsi.me/og-image.png">
+
+<!-- ── FAVICON ── -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon.png">
+
+<!-- ── STRUCTURED DATA ── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Portfolio Projects | Ayaan Khan Warsi",
+  "url": "https://www.ayaankhanwarsi.me/portfolio/",
+  "description": "Featured portfolio projects including web development, Python automation, custom dashboards, and lead generation systems.",
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.ayaankhanwarsi.me/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Portfolio",
+        "item": "https://www.ayaankhanwarsi.me/portfolio/"
+      }
+    ]
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+
+/* ── THEME VARS ── */
+[data-theme="dark"]{
+  --ink:#08080e;--ink2:#0f0f18;--surface:#13131f;
+  --line:#1c1c2e;--line2:#252538;
+  --text:#ede8f5;--sub:#7070a0;
+  --card-bg:#13131f;--nav-bg:rgba(8,8,14,.92);
+}
+[data-theme="light"]{
+  --ink:#f4f4f8;--ink2:#eaeaf2;--surface:#ffffff;
+  --line:#dddde8;--line2:#cbcbdc;
+  --text:#0d0d1a;--sub:#6060a0;
+  --card-bg:#ffffff;--nav-bg:rgba(244,244,248,.92);
+}
+/* ── PREMIUM DESIGN SYSTEM ── */
+:root{
+  --warm:#ff6b35;--glow2:#c850c0;--glow3:#4158d0;--cold:#a8edea;
+  --mono:'Fira Code',monospace;--display:'Bebas Neue',sans-serif;--body:'DM Sans',sans-serif;
+  --spacing-xs:4px;--spacing-sm:8px;--spacing-md:16px;--spacing-lg:24px;--spacing-xl:32px;--spacing-2xl:48px;--spacing-3xl:64px;
+  --radius-sm:6px;--radius-md:12px;--radius-lg:16px;--radius-xl:20px;
+  --shadow-sm:0 1px 2px rgba(0,0,0,.05),0 1px 4px rgba(0,0,0,.08);
+  --shadow-md:0 4px 12px rgba(0,0,0,.12),0 8px 24px rgba(0,0,0,.08);
+  --shadow-lg:0 12px 32px rgba(0,0,0,.15),0 20px 48px rgba(0,0,0,.12);
+  --shadow-xl:0 20px 48px rgba(0,0,0,.2),0 32px 64px rgba(0,0,0,.15);
+}
+
+html{scroll-behavior:smooth;}
+body{background:var(--ink);color:var(--text);font-family:var(--body);overflow-x:hidden;cursor:none;transition:background .4s,color .4s;}
+
+/* ── PAGE TRANSITION ── */
+#page-veil{position:fixed;inset:0;background:var(--warm);z-index:5000;transform:scaleY(1);transform-origin:top;animation:veilOut .7s .1s cubic-bezier(.76,0,.24,1) forwards;}
+@keyframes veilOut{to{transform:scaleY(0);transform-origin:top;}}
+
+/* ── CURSOR ── */
+#cur{width:10px;height:10px;background:var(--warm);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .18s,height .18s;mix-blend-mode:difference;will-change:left,top;}
+#cur2{width:38px;height:38px;border:1.5px solid rgba(255,107,53,.45);border-radius:50%;position:fixed;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .3s,height .3s,border-color .3s;will-change:left,top;}
+#cur.big{width:20px;height:20px;}
+#cur2.big{width:60px;height:60px;border-color:rgba(255,107,53,.75);}
+
+/* ── PROGRESS ── */
+#prog{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--glow3),var(--glow2),var(--warm));z-index:300;width:0%;}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar{width:3px;}
+::-webkit-scrollbar-track{background:var(--ink);}
+::-webkit-scrollbar-thumb{background:var(--warm);}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:20px 56px;display:flex;justify-content:space-between;align-items:center;transition:all .4s;}
+nav.solid{background:var(--nav-bg);backdrop-filter:blur(24px);padding:14px 56px;border-bottom:1px solid var(--line);}
+.logo{font-family:var(--display);font-size:1.5rem;letter-spacing:.05em;text-decoration:none;color:var(--text);display:flex;align-items:center;justify-content:center;gap:0;transition:all .3s cubic-bezier(.23,1,.32,1);height:56px;padding:0 4px;border-radius:var(--radius-sm);position:relative;flex-shrink:0;}
+.logo:hover{background:rgba(255,107,53,.04);}
+.logo img{height:44px;width:auto;object-fit:contain;object-position:center;filter:brightness(1) contrast(1);transition:all .35s cubic-bezier(.23,1,.32,1);}
+.logo:hover img{filter:brightness(1.1) contrast(1.05) drop-shadow(0 0 6px rgba(255,107,53,.15));}
+nav.solid .logo{height:48px;padding:0 2px;}
+nav.solid .logo img{height:36px;}
+@media(max-width:1024px){
+  nav{padding:18px 44px;}
+  nav.solid{padding:13px 44px;}
+  .logo{height:52px;}
+  .logo img{height:40px;}
+  nav.solid .logo img{height:34px;}
+}
+@media(max-width:960px){
+  nav{padding:16px 32px;}
+  nav.solid{padding:12px 32px;}
+  .logo{height:48px;}
+  .logo img{height:36px;}
+  nav.solid .logo{height:44px;}
+  nav.solid .logo img{height:30px;}
+}
+@media(max-width:768px){
+  nav{padding:14px 24px;}
+  nav.solid{padding:10px 24px;}
+  .logo{height:44px;}
+  .logo img{height:32px;}
+  nav.solid .logo img{height:28px;}
+}
+@media(max-width:540px){
+  nav{padding:12px 16px;}
+  nav.solid{padding:9px 16px;}
+  .logo{height:40px;gap:0;}
+  .logo img{height:28px;}
+  nav.solid .logo{height:36px;}
+  nav.solid .logo img{height:24px;}
+}
+.nav-r{display:flex;align-items:center;gap:32px;}
+.nav-links{display:flex;align-items:center;gap:32px;}
+.nav-links a{font-family:var(--mono);font-size:.68rem;color:var(--sub);text-decoration:none;letter-spacing:.08em;transition:color .2s;}
+.nav-links a:hover{color:var(--text);}
+
+/* theme toggle */
+.theme-btn{width:38px;height:22px;border-radius:11px;border:1px solid var(--line2);background:var(--surface);cursor:none;position:relative;transition:all .3s;flex-shrink:0;}
+.theme-knob{width:14px;height:14px;border-radius:50%;background:var(--warm);position:absolute;top:3px;left:3px;transition:transform .3s;}
+[data-theme="light"] .theme-knob{transform:translateX(16px);}
+.theme-icon{font-size:.75rem;position:absolute;top:50%;transform:translateY(-50%);transition:opacity .3s;}
+.theme-icon.sun{right:5px;opacity:1;}
+.theme-icon.moon{left:5px;opacity:1;}
+[data-theme="light"] .theme-icon.sun{opacity:0;}
+[data-theme="dark"] .theme-icon.moon{opacity:0;}
+
+.nav-hire{padding:9px 22px;border:1px solid var(--warm);color:var(--warm)!important;font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-decoration:none;transition:all .25s;background:transparent;}
+.nav-hire:hover{background:var(--warm);color:#000!important;}
+
+/* hamburger */
+.ham{display:none;flex-direction:column;gap:5px;cursor:none;padding:4px;z-index:210;}
+.ham span{display:block;width:24px;height:1.5px;background:var(--text);transition:all .35s cubic-bezier(.23,1,.32,1);}
+.ham.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.ham.open span:nth-child(2){opacity:0;transform:translateX(-8px);}
+.ham.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+
+/* mobile menu */
+.mob-menu{position:fixed;inset:0;background:var(--ink2);z-index:190;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:36px;transform:translateX(100%);transition:transform .5s cubic-bezier(.23,1,.32,1);}
+.mob-menu.open{transform:translateX(0);}
+.mob-menu a{font-family:var(--display);font-size:3.5rem;color:var(--text);text-decoration:none;letter-spacing:.05em;transition:color .2s;}
+.mob-menu a:hover{color:var(--warm);}
+.mob-menu .nav-hire{font-family:var(--display);font-size:2rem;padding:14px 40px;margin-top:12px;}
+
+/* ── SECTIONS ── */
+section{padding:140px 56px;position:relative;}
+.s-tag{font-family:var(--mono);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--warm);margin-bottom:24px;display:flex;align-items:center;gap:12px;font-weight:500;}
+.s-tag::before{content:'';width:2px;height:14px;background:linear-gradient(180deg,var(--warm),transparent);border-radius:1px;}
+.s-ttl{font-family:var(--display);font-size:clamp(3rem,6vw,6rem);letter-spacing:.03em;line-height:.9;margin-bottom:80px;font-weight:700;word-spacing:9999px;}
+.s-ttl em{color:transparent;-webkit-text-stroke:1.5px var(--warm);font-style:normal;}
+.rv{opacity:0;transform:translateY(40px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1);}
+.rv.on{opacity:1;transform:none;}
+
+/* ── BUTTON STYLES ── */
+.btn-p{padding:16px 40px;background:linear-gradient(135deg,var(--warm),#ff8a5c);color:#000;font-family:var(--mono);font-size:.73rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;position:relative;overflow:hidden;transition:all .3s cubic-bezier(.23,1,.32,1);border-radius:var(--radius-md);border:none;cursor:pointer;box-shadow:var(--shadow-md),0 0 20px rgba(255,107,53,.15);}
+.btn-p::after{content:'';position:absolute;top:50%;left:50%;width:0;height:0;background:rgba(255,255,255,.25);border-radius:50%;transform:translate(-50%,-50%);transition:width .5s,height .5s;}
+.btn-p:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg),0 0 30px rgba(255,107,53,.25);}
+.btn-p:hover::after{width:380px;height:380px;}
+.btn-s{padding:16px 40px;background:transparent;color:var(--text);font-family:var(--mono);font-size:.73rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border:1.5px solid var(--line);transition:all .3s cubic-bezier(.23,1,.32,1);border-radius:var(--radius-md);cursor:pointer;}
+.btn-s:hover{border-color:var(--warm);color:var(--warm);background:rgba(255,107,53,.05);box-shadow:0 0 20px rgba(255,107,53,.1);}
+
+/* ── HERO SECTION ── */
+#hero-portfolio{min-height:60vh;position:relative;display:flex;align-items:center;padding:160px 56px 80px;}
+.orb-wrap{position:absolute;inset:0;pointer-events:none;}
+.orb{position:absolute;border-radius:50%;filter:blur(90px);}
+.o1{width:580px;height:580px;background:radial-gradient(circle,#4158d0 0%,transparent 70%);top:-15%;left:-12%;opacity:.35;}
+.o2{width:420px;height:420px;background:radial-gradient(circle,#c850c0 0%,transparent 70%);top:20%;right:-8%;opacity:.3;}
+@keyframes drift{0%,100%{transform:translate(0,0) scale(1);}33%{transform:translate(35px,-28px) scale(1.06);}66%{transform:translate(-22px,38px) scale(.95);}}
+
+.hero-content{position:relative;z-index:10;}
+.breadcrumb{font-family:var(--mono);font-size:.65rem;color:var(--sub);margin-bottom:20px;display:flex;align-items:center;gap:12px;}
+.breadcrumb a{color:var(--warm);text-decoration:none;transition:color .2s;}
+.breadcrumb a:hover{color:var(--text);}
+.breadcrumb-sep{color:var(--line2);}
+
+h1{font-family:var(--display);font-size:clamp(3.5rem,7vw,5.5rem);line-height:1;letter-spacing:.02em;margin-bottom:24px;color:var(--text);}
+h1 em{color:var(--warm);font-style:normal;-webkit-text-stroke:0;}
+.hero-desc{font-size:.95rem;line-height:1.8;color:var(--sub);max-width:580px;margin-bottom:32px;}
+.hero-desc strong{color:var(--text);font-weight:500;}
+
+/* ── PORTFOLIO GRID ── */
+.projgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:60px;}
+.pcard{background:linear-gradient(135deg,rgba(19,19,31,.6),rgba(19,19,31,.2));border:1px solid rgba(255,107,53,.06);padding:40px 36px;position:relative;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column;justify-content:space-between;transform-style:preserve-3d;transition:all .4s cubic-bezier(.23,1,.32,1);border-radius:var(--radius-lg);will-change:transform;backdrop-filter:blur(20px);box-shadow:var(--shadow-sm),inset 0 1px 0 rgba(255,255,255,.06);}
+.pcard::before{content:'';position:absolute;top:0;right:0;left:0;height:1px;background:linear-gradient(90deg,transparent,var(--warm),transparent);opacity:.4;transform:scaleX(0);transition:all .5s;}
+.pcard:hover::before{transform:scaleX(1);opacity:.8;}
+.pcard:hover{border-color:rgba(255,107,53,.16);box-shadow:var(--shadow-lg),inset 0 1px 0 rgba(255,255,255,.06),0 0 24px rgba(255,107,53,.12);transform:translateY(-8px);}
+.pnum{font-family:var(--mono);font-size:.62rem;color:var(--warm);letter-spacing:.1em;margin-bottom:16px;font-weight:500;}
+.pname{font-family:var(--display);font-size:1.9rem;letter-spacing:.01em;margin-bottom:14px;line-height:1.1;transition:color .3s;font-weight:600;color:var(--text);}
+.pcard:hover .pname{color:var(--warm);}
+.pdesc{font-size:.83rem;line-height:1.85;color:var(--sub);margin-bottom:24px;font-weight:400;flex-grow:1;}
+.pfoot{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:20px;border-top:1px solid rgba(255,107,53,.08);}
+.ptechs{display:flex;gap:8px;flex-wrap:wrap;}
+.ppill{font-family:var(--mono);font-size:.6rem;padding:6px 12px;border:1px solid rgba(255,107,53,.12);color:var(--sub);border-radius:var(--radius-sm);transition:all .2s;background:rgba(255,107,53,.04);}
+.pcard:hover .ppill{border-color:rgba(255,107,53,.2);color:var(--warm);background:rgba(255,107,53,.08);}
+.plink{font-family:var(--mono);font-size:.65rem;color:var(--warm);display:flex;align-items:center;gap:6px;transition:all .3s;font-weight:600;}
+.pcard:hover .plink{gap:10px;}
+.plink svg{transition:transform .3s cubic-bezier(.23,1,.32,1);}
+.pcard:hover .plink svg{transform:translate(4px,-4px);}
+
+/* ── CTA SECTION ── */
+.cta-section{text-align:center;max-width:800px;margin:0 auto;}
+.cta-title{font-family:var(--display);font-size:clamp(2.5rem,5vw,4.5rem);letter-spacing:.02em;line-height:1.1;margin-bottom:24px;color:var(--text);}
+.cta-title em{color:var(--warm);font-style:normal;}
+.cta-desc{font-size:.9rem;line-height:1.9;color:var(--sub);margin-bottom:40px;}
+.cta-btns{display:flex;gap:16px;justify-content:center;align-items:center;flex-wrap:wrap;}
+
+/* ── FOOTER ── */
+footer{padding:32px 56px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;background:var(--ink2);gap:32px;}
+footer .ft{display:flex;align-items:center;gap:12px;align-self:center;}
+footer .ft-logo{height:28px;width:auto;object-fit:contain;object-position:center;filter:brightness(.85) contrast(.95);transition:all .35s cubic-bezier(.23,1,.32,1);flex-shrink:0;}
+footer .ft-logo:hover{filter:brightness(1.05) contrast(1) drop-shadow(0 0 4px rgba(255,107,53,.12));}
+footer .ft:first-child .ft-logo{margin-right:4px;}
+footer .ft:first-child{flex:0 1 auto;}
+footer .ft:last-child{flex:0 1 auto;margin-left:auto;}
+.ft{font-family:var(--mono);font-size:.6rem;color:var(--sub);}
+.ft strong{color:var(--warm);font-weight:600;}
+
+/* ── MOBILE RESPONSIVE ── */
+@media(max-width:960px){
+  .nav-links{display:none;}
+  .ham{display:flex;}
+  nav{padding:16px 32px;}
+  section{padding:80px 24px;}
+  #hero-portfolio{padding:120px 24px 60px;}
+  h1{font-size:clamp(2.5rem,5vw,4rem);}
+  .projgrid{grid-template-columns:1fr;}
+  footer{flex-direction:column;gap:10px;text-align:center;padding:22px;}
+  footer .ft{justify-content:center;}
+  footer .ft-logo{height:28px;}
+}
+@media(max-width:540px){
+  nav{padding:12px 16px;}
+  section{padding:60px 16px;}
+  #hero-portfolio{padding:100px 16px 50px;}
+  h1{font-size:clamp(2rem,4vw,3rem);}
+  .cta-btns{flex-direction:column;}
+  .btn-p,.btn-s{width:100%;}
+  footer{flex-direction:column;gap:12px;text-align:center;padding:20px 16px;}
+  footer .ft{width:100%;justify-content:center;}
+  footer .ft:last-child{margin-left:0;}
+  footer .ft-logo{height:22px;}
+}
+</style>
+</head>
+<body>
+
+<!-- PAGE TRANSITION VEIL -->
+<div id="page-veil"></div>
+
+<!-- CURSOR -->
+<div id="cur"></div>
+<div id="cur2"></div>
+<div id="prog"></div>
+
+<!-- MOBILE MENU -->
+<div class="mob-menu" id="mob-menu">
+  <a href="/" class="mob-link">Home</a>
+  <a href="/#about" class="mob-link">About</a>
+  <a href="/#skills" class="mob-link">Skills</a>
+  <a href="/#services" class="mob-link">Services</a>
+  <a href="/#businesses" class="mob-link">Ventures</a>
+  <a href="/#projects" class="mob-link">Work</a>
+  <a href="/blog/" class="mob-link">Blog</a>
+  <a href="/#contact" class="nav-hire mob-link">Hire Me</a>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="/" class="logo"><img src="/assets/branding/logo-main-transparent.png" alt="Ayaan Khan Warsi - Web Developer" /></a>
+  <div class="nav-r">
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/#about">About</a>
+      <a href="/#skills">Skills</a>
+      <a href="/#services">Services</a>
+      <a href="/#businesses">Ventures</a>
+      <a href="/#projects">Work</a>
+      <a href="/blog/">Blog</a>
+    </div>
+    <button class="theme-btn" id="theme-btn" aria-label="Toggle theme">
+      <div class="theme-knob"></div>
+      <span class="theme-icon moon">🌙</span>
+      <span class="theme-icon sun">☀️</span>
+    </button>
+    <a href="/#contact" class="nav-hire">Hire Me</a>
+    <div class="ham" id="ham">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section id="hero-portfolio">
+  <div class="orb-wrap">
+    <div class="orb o1"></div>
+    <div class="orb o2"></div>
+  </div>
+  <div class="hero-content rv">
+    <div class="breadcrumb">
+      <a href="/">Home</a>
+      <span class="breadcrumb-sep">/</span>
+      <span>Portfolio</span>
+    </div>
+    <h1>Portfolio <em>Projects</em></h1>
+    <p class="hero-desc">
+      <strong>Discover the projects I've built for startups, agencies, and businesses.</strong> From high-converting web applications to intelligent automation systems, each project demonstrates expertise in full-stack development, Python automation, and business-focused solutions.
+    </p>
+  </div>
+</section>
+
+<!-- PORTFOLIO GRID -->
+<section style="background:var(--ink2);padding:80px 56px;">
+  <div class="projgrid">
+    <a href="/portfolio/business-dashboard-project.html" class="pcard rv">
+      <div>
+        <div class="pnum">Project — 01</div>
+        <div class="pname">Business Analytics Dashboard</div>
+        <div class="pdesc">
+          Real-time analytics dashboard for tracking business metrics. Built with React and Node.js backend, featuring live data visualization, automated reports, and multi-user access control for enterprise teams.
+        </div>
+      </div>
+      <div class="pfoot">
+        <div class="ptechs"><span class="ppill">React</span><span class="ppill">Node.js</span><span class="ppill">Analytics</span><span class="ppill">Dashboard</span></div>
+        <div class="plink">View Project <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M1.5 11.5L11.5 1.5M11.5 1.5H4.5M11.5 1.5V8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      </div>
+    </a>
+
+    <a href="/portfolio/custom-business-website-project.html" class="pcard rv">
+      <div>
+        <div class="pnum">Project — 02</div>
+        <div class="pname">Custom E-Commerce Website</div>
+        <div class="pdesc">
+          Premium e-commerce platform built with modern web technologies. Features include product catalog, shopping cart, Stripe payment integration, inventory management, and mobile-optimized design for maximum conversions.
+        </div>
+      </div>
+      <div class="pfoot">
+        <div class="ptechs"><span class="ppill">Web Dev</span><span class="ppill">E-Commerce</span><span class="ppill">Stripe</span><span class="ppill">Mobile</span></div>
+        <div class="plink">View Project <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M1.5 11.5L11.5 1.5M11.5 1.5H4.5M11.5 1.5V8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      </div>
+    </a>
+
+    <a href="/portfolio/lead-generation-system.html" class="pcard rv">
+      <div>
+        <div class="pnum">Project — 03</div>
+        <div class="pname">Lead Generation & CRM System</div>
+        <div class="pdesc">
+          Automated lead capture and management system. Integrated with multiple data sources, featuring intelligent lead scoring, automated follow-ups, and detailed analytics to maximize sales pipeline efficiency and conversion rates.
+        </div>
+      </div>
+      <div class="pfoot">
+        <div class="ptechs"><span class="ppill">CRM</span><span class="ppill">Automation</span><span class="ppill">Lead Gen</span><span class="ppill">Python</span></div>
+        <div class="plink">View Project <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M1.5 11.5L11.5 1.5M11.5 1.5H4.5M11.5 1.5V8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      </div>
+    </a>
+
+    <a href="/portfolio/portfolio-website-project.html" class="pcard rv">
+      <div>
+        <div class="pnum">Project — 04</div>
+        <div class="pname">Portfolio Website Template</div>
+        <div class="pdesc">
+          Modern, responsive portfolio website showcasing creative work. Built with semantic HTML, advanced CSS animations, smooth scroll interactions, and SEO optimization. Fully customizable design system and component library included.
+        </div>
+      </div>
+      <div class="pfoot">
+        <div class="ptechs"><span class="ppill">HTML/CSS</span><span class="ppill">JavaScript</span><span class="ppill">Responsive</span><span class="ppill">SEO</span></div>
+        <div class="plink">View Project <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M1.5 11.5L11.5 1.5M11.5 1.5H4.5M11.5 1.5V8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      </div>
+    </a>
+
+    <a href="/portfolio/ai-automation-project.html" class="pcard rv">
+      <div>
+        <div class="pnum">Project — 05</div>
+        <div class="pname">AI-Powered Automation Suite</div>
+        <div class="pdesc">
+          Advanced automation toolkit powered by AI and machine learning. Handles complex business workflows including document processing, data extraction, intelligent classification, and predictive analytics with minimal manual intervention.
+        </div>
+      </div>
+      <div class="pfoot">
+        <div class="ptechs"><span class="ppill">Python</span><span class="ppill">AI/ML</span><span class="ppill">Automation</span><span class="ppill">APIs</span></div>
+        <div class="plink">View Project <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M1.5 11.5L11.5 1.5M11.5 1.5H4.5M11.5 1.5V8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section style="background:var(--ink);padding:100px 56px;">
+  <div class="cta-section rv">
+    <h2 class="cta-title">Ready to Build Your <em>Next Project?</em></h2>
+    <p class="cta-desc">
+      Inspired by these projects? Let's discuss your idea, timeline, and goals. I specialize in building scalable solutions that drive real business results. Available for startups, agencies, and enterprises.
+    </p>
+    <div class="cta-btns">
+      <a href="/#contact" class="btn-p">Get Started Now</a>
+      <a href="/" class="btn-s">Back to Home</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft"><img src="/assets/branding/logo-main-transparent.png" alt="AKW Brand" class="ft-logo" />&copy; 2025 <strong>Ayaan Khan Warsi</strong></div>
+  <div class="ft">Delhi, India &nbsp;&#x2665;&nbsp; Made with passion.</div>
+</footer>
+
+<script>
+// ── THEME TOGGLE ── 
+const themeBtn = document.getElementById('theme-btn');
+const html = document.documentElement;
+const savedTheme = localStorage.getItem('theme') || 'dark';
+html.setAttribute('data-theme', savedTheme);
+themeBtn?.addEventListener('click', () => {
+  const current = html.getAttribute('data-theme');
+  const newTheme = current === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme', newTheme);
+});
+
+// ── MOBILE MENU ──
+const ham = document.getElementById('ham');
+const mobMenu = document.getElementById('mob-menu');
+const mobLinks = document.querySelectorAll('.mob-link');
+ham?.addEventListener('click', () => {
+  ham.classList.toggle('open');
+  mobMenu.classList.toggle('open');
+});
+mobLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    ham.classList.remove('open');
+    mobMenu.classList.remove('open');
+  });
+});
+
+// ── NAVBAR SCROLL EFFECT ──
+const nav = document.getElementById('nav');
+let lastScroll = 0;
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 100) {
+    nav.classList.add('solid');
+  } else {
+    nav.classList.remove('solid');
+  }
+  lastScroll = window.scrollY;
+});
+
+// ── CUSTOM CURSOR ──
+const cur = document.getElementById('cur');
+const cur2 = document.getElementById('cur2');
+let mouseX = 0, mouseY = 0;
+document.addEventListener('mousemove', (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+  cur.style.left = mouseX + 'px';
+  cur.style.top = mouseY + 'px';
+  cur2.style.left = mouseX + 'px';
+  cur2.style.top = mouseY + 'px';
+});
+const hoverElements = document.querySelectorAll('a, button, .pcard');
+hoverElements.forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    cur.classList.add('big');
+    cur2.classList.add('big');
+  });
+  el.addEventListener('mouseleave', () => {
+    cur.classList.remove('big');
+    cur2.classList.remove('big');
+  });
+});
+
+// ── REVEAL ANIMATION ──
+const revealElements = document.querySelectorAll('.rv');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('on');
+    }
+  });
+}, { threshold: 0.1 });
+revealElements.forEach(el => observer.observe(el));
+
+// ── PROGRESS BAR ──
+const prog = document.getElementById('prog');
+window.addEventListener('scroll', () => {
+  const winScroll = document.body.scrollLeft || document.documentElement.scrollLeft;
+  const width = ((window.scrollY) / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+  prog.style.width = width + '%';
+});
+</script>
+</body>
+</html>
