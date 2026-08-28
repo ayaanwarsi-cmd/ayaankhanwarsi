@@ -255,6 +255,49 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- Portfolio Pages -->
+  <url>
+    <loc>https://www.ayaankhanwarsi.me/portfolio/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.ayaankhanwarsi.me/portfolio/ai-automation-project.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.ayaankhanwarsi.me/portfolio/business-dashboard-project.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.ayaankhanwarsi.me/portfolio/custom-business-website-project.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.ayaankhanwarsi.me/portfolio/lead-generation-system.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.ayaankhanwarsi.me/portfolio/portfolio-website-project.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Blog Pages -->
   <url>
     <loc>https://www.ayaankhanwarsi.me/blog/</loc>
@@ -314,42 +357,6 @@
 
   <url>
     <loc>https://www.ayaankhanwarsi.me/blog/website-development-cost-delhi.html</loc>
-    <lastmod>2026-05-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Portfolio Pages -->
-  <url>
-    <loc>https://www.ayaankhanwarsi.me/portfolio/custom-business-website-project.html</loc>
-    <lastmod>2026-05-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://www.ayaankhanwarsi.me/portfolio/ai-automation-project.html</loc>
-    <lastmod>2026-05-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://www.ayaankhanwarsi.me/portfolio/business-dashboard-project.html</loc>
-    <lastmod>2026-05-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://www.ayaankhanwarsi.me/portfolio/lead-generation-system.html</loc>
-    <lastmod>2026-05-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://www.ayaankhanwarsi.me/portfolio/portfolio-website-project.html</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

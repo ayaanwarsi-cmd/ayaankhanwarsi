@@ -10,6 +10,6 @@ The website showcases expertise in:
 
 The site provides information about the developer's skills, projects, and professional background.
 
-Canonical URL: https://www.ayaankhanwarsi.me
+Canonical URL: https://www.ayaankhanwarsi.me/
 
 Owner: Ayaan Khan Warsi
